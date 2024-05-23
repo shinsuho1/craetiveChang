@@ -1,0 +1,479 @@
+// ==================================== import ====================================
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap'); */
+// @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'); /* 프리스텐다드 */
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* Poppins */
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); /* Open Sans */ 
+// @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap'); /* 주아폰트 */
+// @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap'); /* DotGothic16 */
+// @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* M PLUS 1 */
+// @import url('https://fonts.googleapis.com/css2?family=Metal&display=swap'); /* Metal */
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* Inter */
+// @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* Lexend */
+// @import url('https://webfontworld.github.io/sandbox/SBAggro.css');
+// @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+// @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+// @import url('https://webfontworld.github.io/naver/NanumBarunGothic.css');
+// @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+// @import url('https://webfontworld.github.io/kopus/KoPubWorldDotum.css');
+// @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+// @import url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo.css'); 
+// @import url('https://webfontworld.github.io/tvn/EnjoyStories.css');
+// @import url('https://webfontworld.github.io/kukde/SDKukDeTopokki.css');
+
+
+
+
+// ====================================DEFAULT MIXIN====================================
+$font-color-default : #151515;
+$color-100 : #000;
+
+$color-fff : #fff;
+$color-4583ff : #4583ff;
+$color-1b4db1 : #1B4DB1;
+$color-1a469d : #1a469d;
+$color-b8d0ff : #b8d0ff;
+$color-5473a3 : #5473a3;
+$color-1B345A : #1B345A;
+$color-8c8c8c : #8c8c8c;
+$color-ed1b24 : #ed1b24;
+$color-ef7f00 : #ef7f00;
+$color-b1b1b1 : #b1b1b1;
+$color-7b7b7b : #7b7b7b;
+
+/* chang */
+$color-df1f26 : #df1f26;
+$color-f01819 : #f01819;
+
+@mixin fullsize {width: 100%; height: 100%;}
+@mixin flexCenter { display: flex; justify-content: center; align-items: center; }
+@mixin position-absolute-center {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+@mixin position-absolute($option_01, $option_01_px, $option_02, $option_02_px) {position: absolute;#{$option_01}: $option_01_px;#{$option_02}: $option_02_px;}
+@mixin position-fixed($option_01, $option_01_px, $option_02, $option_02_px) {position: fixed;#{$option_01}: $option_01_px;#{$option_02}: $option_02_px;}
+@mixin position-unset() {
+  position: unset;
+  left: unset; right: unset; top: unset; bottom: unset;
+  transform: unset;
+}
+@mixin el-layout-flex($gap-col, $gap-row, $el-lenght) {
+  $column_gap : $gap-col;          /* 간격 */
+  $row_gap : $gap-row;             /* 간격 */
+  $column_gap_count : $el-lenght;  /* 1줄당 개수 */
+  $column_gap_count_per : (100% / $column_gap_count);  
+  $column_gap_calc_1 : ($column_gap / $column_gap_count); 
+  $column_gap_calc_2 : ($column_gap - $column_gap_calc_1);
+  display: flex; flex-wrap: wrap; column-gap: $column_gap; row-gap: $row_gap;
+  > * {width: calc($column_gap_count_per - $column_gap_calc_2);}
+}
+
+
+@mixin transition($x) {transition: $x;-webkit-transition: $x;-moz-transition: $x;-ms-transition: $x;-o-transition: $x;};
+@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; -ms-border-radius: $radius; border-radius: $radius; }
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    } @else {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: $line;
+    }
+}
+  @mixin clearfix {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+@mixin clipText($num) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $num;
+    overflow: hidden;
+}
+
+@mixin after-bar-absolute($left_px, $width,$height, $color) { 
+  content: '';
+  @include position-absolute(left,$left_px,top,50%);
+  transform: translateY(-50%);
+  width: $width; height: $height; background-color: $color;
+}
+
+@mixin el_hide {opacity: 0; visibility: hidden; pointer-events: none;}
+@mixin el_fade {opacity: 1; visibility: visible; pointer-events: auto;}
+// ====================================DEFAULT MIXIN====================================
+
+
+// ====================================JJ MIXIN====================================
+@mixin fixed-layout-marginAuto($max-width) {max-width: $max-width; width: 100%; margin: 0 auto; @include transition(padding .3s)}
+@mixin fixed-layout($max-width) {max-width: $max-width; width: 100%;}
+@mixin fixed-wh($wh) {width: $wh;height: $wh; min-width: $wh; min-height: $wh;}
+
+
+@mixin draggable_off { -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; pointer-events:none}
+@mixin draggable_on { -webkit-user-select:all; -moz-user-select:all; -ms-user-select:all; user-select:all; pointer-events:initial}
+
+@for $i from 1 to 101{
+  .wid_#{$i}{
+      width: $i + "%";
+  }
+}
+// ==================================== KEYFRAMES ====================================
+
+
+// ====================================JJ MIXIN====================================
+@mixin fs-220 {font-size: 22rem;}
+@mixin fs-117 {font-size: 11.7rem;}
+@mixin fs-47 {font-size: 47px}
+@mixin fs-40 {font-size: 40px;}
+@mixin fs-35 {font-size: 35px;}
+@mixin fs-32 {font-size: 32px;}
+@mixin fs-24 {font-size: 24px;}
+@mixin fs-14 {font-size: 14px;}
+@mixin fs-12 {font-size: 12px;}
+
+
+@mixin fs-120 {font-size: 12rem;}
+@mixin fs-75 {font-size: 75px;}
+@mixin fs-48 {font-size: 48px;}
+@mixin fs-30 {font-size: 30px;}
+@mixin fs-28 {font-size: 28px;}
+@mixin fs-20 {font-size: 20px;}
+
+
+
+
+// ==================================== common ====================================
+* {
+	box-sizing: border-box; padding:0; margin:0;
+  border: 0; word-break: keep-all;
+}
+h1, h2, h3, h4, h5, h6 {font-weight: unset;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol, ul, li {list-style: none; padding: 0; margin: 0;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0; table-layout: fixed;}
+a{ text-decoration: none; color: inherit; }
+img {vertical-align: top; max-width: 100%;}
+p {
+  &::first-line {}
+  &::first-letter {}
+}
+
+html {
+	/* width: 100%; height: 100%;  */
+	// font-size: 62.5%;
+	// overflow-x: hidden;
+  font-size: 10px;
+	// scroll-behavior: smooth;
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: auto;
+  /* scroll_bar_iex */
+  scrollbar-width: 4px;
+  scrollbar-track-color: #e5e5e5;
+  scrollbar-arrow-color: #000;
+  scrollbar-base-color: #e5e5e5;
+  scrollbar-face-color: #000;
+  // overflow-x: hidden;
+  /* scroll_bar */
+  &::-webkit-scrollbar {width: 4px; height: 10px;}
+  &::-webkit-scrollbar-thumb {background-color: $color-df1f26; }
+  &::-webkit-scrollbar-track {background-color: transparent; } 
+}
+
+body {
+	line-height: 1.3;
+	width: 100%; height: 100%;
+	color: $font-color-default;
+	font-family: 'Noto Sans KR','sans-serif';
+	// overflow-x: hidden;
+  ::selection { color: #fff; background: #df1f26;}
+  a.a_link { @include transition(.15s); 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover { opacity: .5;} 
+    }
+  }
+  bar {display: block;}
+  button {cursor: pointer; background: none; white-space: nowrap;}
+  input, button, textarea, select{
+    &.add_board, &:focus-visible {
+      outline: 1px solid #ef7f00 !important;
+    }
+    &::placeholder {color: #cecece; font-weight: normal;}
+    border: none; font-family: inherit;
+    -webkit-appearance: none;-webkit-border-radius: 0; border-radius: 0;
+    &[type=submit] {cursor: pointer;}
+    &[type=number]::-webkit-outer-spin-button, &[type=number]::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+    
+  }
+  select {
+    position: relative; background-image: url("../images/common/ico_arrow_01_02.svg"); background-repeat: no-repeat; background-position: 95%;
+    &:focus {background-image: url("../images/common/ico_select_01_02.svg");}
+  }
+
+  // ==================================== Class ====================================
+  #viewZoomLayer {
+    position: fixed; top: 0; bottom: 0; z-index: 9999;
+    @include transition(all .3s);
+    @include fullsize;
+    display: block;
+    background-color: #fff;
+    visibility: hidden; opacity: 0;
+    &.showIn {
+        visibility: visible; opacity: 1;
+    }
+
+    #openseadragon {
+        @include fullsize;
+        position: relative;
+        overflow: hidden;
+        canvas {
+            display: block;
+        }
+    }
+
+    .viewZoomLayer_close {
+        @include position-absolute(right,20px,top,20px); z-index: 2;
+        width: 50px; height: 50px;
+        background: url('../images/common/ico_close_black.svg')no-repeat center/contain;
+        cursor: pointer;
+        @include transition(all .15s);
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            opacity: .5
+          }
+        }
+    }
+    .zoomController {
+        @include position-absolute(left,50%,bottom,20px); transform: translateX(-50%);z-index: 2;
+        @include flexCenter;
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        .range {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+            margin: 0px 10px;
+            outline: none;
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+        }
+        .minus,.plus {
+            height: 32px;
+            width: 32px;
+            padding: 10px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+    }
+  }
+  .viewZoom {
+    position: relative;
+    .zoomInBtn {
+        @include transition(all .3s .3s);
+        @include position-absolute(right,20px,bottom, 20px);
+        font-size: 18px; font-weight: bold;
+        @include flexCenter();
+        opacity: 0; visibility: hidden; pointer-events: none;
+        background-color: unset;
+        border-radius: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        &.show {
+            opacity: 1; visibility: visible; pointer-events: all;
+        }
+        img {
+            all:unset;
+            width: 25px;
+        }
+    }
+  }
+  .viewZoom_img {
+    cursor: pointer;
+    @include transition(all .5s);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {opacity: .5;}
+    }
+  }
+
+  .c_pointer {cursor: pointer;}
+  .draggable_off { -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; pointer-events:none}
+  .draggable_on { -webkit-user-select:all; -moz-user-select:all; -ms-user-select:all; user-select:all; pointer-events:initial}
+  .ck-content .d_content * {}
+  .tooltip-inner.active {background-color: #198754;}
+
+
+  .non_link {cursor: default;}
+  .fake_file {position: absolute;top: 1000%;right: 1000%;z-index: 1;opacity: 0;}
+  .btn_01 {
+      $wh : 84px;
+      width: fit-content;
+      position: relative;
+      display: flex; align-items: center;
+      &:hover {
+          .ico_wrap {
+              border-color: transparent;
+              img {@include el_fade;}
+              &::after {
+                  scale: 1;
+              }
+          }
+          p {
+              margin-left: 0; padding-left: 10px;
+          }
+      }
+      .ico_wrap {
+          @include transition(all .5s);
+          @include fixed-wh($wh);
+          @include flexCenter;
+          position: relative;
+          border: 1px solid #ddd;
+          background-color: #000; border-radius: 100%;
+          overflow: hidden;
+          &::after {
+              content: '';
+              @include transition(all .5s);
+              @include fullsize;
+              @include position-absolute(left,0,top,0);
+              background-color: #fff;
+              border-radius: 100%;
+              scale: 0;
+          }
+          img {
+              position: relative; z-index: 2;
+              @include transition(all .5s);
+              @include el_hide;
+          }
+      }
+      p {
+          @include transition(all .5s);
+          @include fs-24;
+          position: relative; z-index: 2;
+          margin-left: calc($wh / -2);
+          font-weight: 300;
+      }
+  }
+  .hello_jj_wrap {
+      @include draggable_off;
+      * {
+          @include draggable_off;
+      }
+      .hellojj {
+          position: relative;
+          @include fullsize;
+          img {
+              opacity: 0; display: none;
+          }
+      }
+
+  }
+  .swiper-option {
+      .swiper-btn {
+          @include transition(all .3s);
+          &.swiper-button-disabled {@include el_hide;}
+          &:not(.swiper-button-disabled) {
+              &:hover {
+                  opacity: .5;
+              }
+              &.click_event_01 {
+                  img {
+                      &.active {padding-left: 100%; @include transition(all .3s)}
+                  }
+              }
+          }
+
+      }
+  }
+
+  .pc_only {display: block;}
+  .ta_only {display: none;}
+  .mo_only {display: none;}
+
+}
+
+
+
+
+
+
+/* --------------------Class-------------------- */
+
+@media (min-width: 2560px) {
+	// html {font-size: 73%;}
+}
+
+@media (max-width: 1440px) {
+  body {
+    .pc_only {display: block !important;}
+    .ta_only, .mo_only {display: none !important;}
+  }
+}
+@media (max-width: 1100px) {
+	// html{font-size: 50% !important;}
+	/* html{font-size: 44% !important;} */
+}
+
+@media (max-width: 1023px) {
+  body {
+    .pc_only, .ta_only {display: block !important;}
+    .mo_only {display: none !important;}
+  }
+}
+
+@media (max-width: 767px) {
+	// html{font-size: 44% !important;}
+  body {
+    
+    .mo-del {display: none;}
+    .m-width-10 {width: 10% !important;}
+    .m-width-15 {width: 15% !important;}
+    .m-width-20 {width: 20% !important;}
+    .m-width-30 {width: 30% !important;}
+    .m-width-40 {width: 40% !important;}
+    .m-width-50 {width: 50% !important;}
+    .m-width-60 {width: 60% !important;}
+    .m-width-70 {width: 70% !important;}
+    .m-width-80 {width: 80% !important;}
+    .m-width-90 {width: 90% !important;}
+    .m-width-100 {width: 100% !important;}
+
+    
+    .m-text-left {text-align: left;}
+    .m-text-center {text-align: center;}
+    .m-text-right {text-align: right}
+
+    .pc_only {display: none !important;}
+    .ta_only, .mo_only {display: block !important;}
+  }
+
+}
+
+@media (max-width: 479px) {
+	/* html {font-size: 37.5% !important;} */
+  body {
+    .pc_only, .ta_only {display: none !important;}
+    .mo_only {display: block !important;}
+  }
+}
+
+
+

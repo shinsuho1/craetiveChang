@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------------------SEO-------------------- -->
+    <title><?= $siteSEO['title'] ?></title>
+    <meta name="apple-mobile-web-app-title" content="<?= $siteSEO['title'] ?>">
+    <link rel="canonical" href="<?= $siteSEO['url'] ?>">
+    <link rel="icon" href="<?= $siteSEO['img_favicon'] ?>" type="image/x-icon">
+    <meta name="author" content="Aijin-jj">
+    <meta name="keywords" content="<?= $siteSEO['keywords'] ?>">
+    <meta name="description" content="<?= $siteSEO['description'] ?>">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="<?= $siteSEO['url'] ?>">
+    <meta property="og:image" content="<?= $siteSEO['img_og'] ?>">
+    <meta property="og:title" content="<?= $siteSEO['title'] ?>">
+    <meta property="og:description" content="<?= $siteSEO['description'] ?>">
+
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<?= $siteSEO['title'] ?>">
+    <meta name="twitter:description" content="<?= $siteSEO['description'] ?>">
+    <meta name="twitter:url" content="<?= $siteSEO['url'] ?>">
+    <meta name="twitter:image" content="<?= $siteSEO['img_og'] ?>">
+    <!-- --------------------SEO-------------------- -->
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/gnb.css" data-type="X"> -->
+</head>
+
+<body>
+    <header class="gnb_header">
+        <div class="header-wrap">
+            <div class="inner">
+                <div class="logo-box">
+                    <a href="../main/index.html" class="logo">
+                        <img src="../images/common/header_logo.png" alt="CREATIVEAD CHANG">
+                    </a>
+                    <div class="menuicon-box">
+                        <div class="menuicon">
+                            <span></span>
+                            <span class="top"></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="gnb">
+                    <li>
+                        <div class="a-box">
+                            <a href="/main/index.html" class="normal">About</a>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="../about/overview.html">OVERVIEW</a>
+                            </li>
+                            <li>
+                                <a href="#none">CERTIFICATION</a>
+                            </li>
+                            <li>
+                                <a href="#none">CONTACT</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="#none" class="normal">Client</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="../portfolio/detail.html" class="normal">Portfolio</a>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="../portfolio/detail.html">브랜딩</a>
+                            </li>
+                            <li>
+                                <a href="#none">인쇄제작물</a>
+                            </li>
+                            <li>
+                                <a href="#none">광고홍보</a>
+                            </li>
+                            <li>
+                                <a href="#none">웹</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="../estimate/estimate.html" class="normal">Estimate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="../recruitment/recruitment.html" class="normal">Recruitment</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="util">
+            <ul class="sns">
+                <li>
+                    <a href="#none">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="side">
+            <div class="inner">
+
+                <div class="head">
+                    <a href="../main/index.html" class="logo">
+                        <img src="../images/common/header_logo.png" alt="CREATIVEAD CHANG">
+                    </a>
+                    <div class="close_btn">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="center">
+                    <ul class="gnb">
+                        <li>
+                            <div class="a-box">
+                                <a href="../main/index.html" class="normal">HOME</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="#none" class="normal">ABOT</a>
+                            </div>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="../about/overview.html">OVERVIEW</a>
+                                </li>
+                                <li>
+                                    <a href="#none">CERTIFICATION</a>
+                                </li>
+                                <li>
+                                    <a href="#none">CONTACT</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="#none" class="normal">CLIENT</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="#none" class="normal">PORTFOLIO</a>
+                            </div>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#none">브랜딩</a>
+                                </li>
+                                <li>
+                                    <a href="#none">인쇄제작물</a>
+                                </li>
+                                <li>
+                                    <a href="#none">광고홍보</a>
+                                </li>
+                                <li>
+                                    <a href="#none">웹</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="../estimate/estimate.html" class="normal">ESTIMATE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="../recruitment/recruitment.html" class="normal">RECRUITMENT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    <ul class="sns">
+                        <li>
+                            <a href="#none">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    Copyright &copy; CREATIVEAD CHANG Inc.<br class="mo-only" /> All rights reserved.
+                    <a href="#none" class="project-btn">
+                        <div class="text">
+                            <p>Start a Project</p>
+                            <div class="arrow"><img src="../images/common/footer_arrow.svg" alt="arrow"></div>
+                        </div>
+                        <div class="box"><img src="../images/common/footer_logo.png" alt="CREATIVEAD CHANG"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="portfolio">
+        <div id="sub" class="portfolio_youonejae">
+            <div class="main">
+                <div class="swiper portfolio">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/main.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="title">
+                    <div class="left">
+                        <div class="type">RESPONSIVE WEB SITE</div>
+                        <div class="logo">
+                            <img src="./images/logo.png" alt="">
+                        </div>
+                    </div>
+                    <ul class="right">
+                        <li>
+                            <span>CLIENT</span>
+                            <div>유원재</div>
+                        </li>
+                        <li>
+                            <span>PROJECT</span>
+                            <div>반응형 웹</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="inner">
+                    <div class="title-box">
+                        <div class="left " data-aos="fade-right">
+                            <h3>하루동안 정원에 머무르는 곳이라는<br class="ta-only"/> 의미를 갖는 유원재</h3>
+                            <div class="btn">
+                                <a href="https://youonejae.com/" target="_blank">사이트 바로가기</a>
+                            </div>
+                        </div>
+                        <div class="right text-box" data-aos="fade-left">
+                            <h4>CONCEPT</h4>
+                            <div class="explain">
+                                온천과 건강한 식사, 편안한 휴식, 주변 산세와 정원을 <br />
+                                차경하며 오롯이 나를 돌아볼 수 있게 하는 곳.<br />
+                                <br />
+                                수안보의 아름다운 풍경과 자연이 머물며 <br />
+                                따뜻한 달빛과 온기가 머물고 여유로운 시간과 온전히 <br />
+                                나를 돌아보는 마음이 머무는 곳.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner01" data-aos="fade-up">
+                        <img src="./images/banner01.png" alt="">
+                    </div>
+                    <div class="sticky-wrap">
+                        <ul>
+                            <li data-aos="fade-right"><img src="./images/detail_main01.png" alt=""></li>
+                            <li data-aos="fade-right"><img src="./images/detail_main02.png" alt=""></li>
+                            <li data-aos="fade-right"><img src="./images/detail_main03.png" alt=""></li>
+                            <li data-aos="fade-right"><img src="./images/detail_main04.png" alt=""></li>
+                        </ul>
+                        <div class="text-box">
+                            <h4>MAIN</h4>
+                            <div class="explain">
+                                온천과 건강한 식사, 편안한 휴식, 주변 산세와 정원을 <br />
+                                차경하며 오롯이 나를 돌아볼 수 있게 하는 곳. <br />
+                                <br />
+                                수안보의 아름다운 풍경과 자연이 머물며 <br />
+                                따뜻한 달빛과 온기가 머물고 여유로운 시간과 온전히 <br />
+                                나를 돌아보는 마음이 머무는 곳. <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="full" data-aos="fade-up">
+                <div class="img-wrap">
+                    <img src="./images/full01.png" alt="">
+                </div>
+                <div class="img-wrap">
+                    <img src="./images/full02.png" alt="">
+                </div>
+            </div>
+            <div class="detail">
+                <div class="inner">
+                    <div class="banner01" data-aos="fade-up">
+                        <img src="./images/banner02.png" alt="">
+                    </div>
+                    <div class="scroll-section">
+                        <div class="top">
+                            <div class="text-box" data-aos="fade-up">
+                                <h4>MAIN</h4>
+                                <div class="explain">
+                                    온천과 건강한 식사, 편안한 휴식, 주변 산세와 정원을 <br />
+                                    차경하며 오롯이 나를 돌아볼 수 있게 하는 곳. <br />
+                                    <br />
+                                    수안보의 아름다운 풍경과 자연이 머물며 <br />
+                                    따뜻한 달빛과 온기가 머물고 여유로운 시간과 온전히 <br />
+                                    나를 돌아보는 마음이 머무는 곳. <br />
+                                </div>
+                            </div>
+                            <ul class="scl-mot">
+                                <li class="move01 jj_ani_return"><img src="./images/phone01.png" alt=""></li>
+                                <li class="move02 jj_ani_return"><img src="./images/phone02.png" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="center">
+                            <ul class="scl-mot">
+                                <li class="move03 jj_ani_return"><img src="./images/phone03.png" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="bot">
+                            <ul class="scl-mot">
+                                <li class="move04 jj_ani_return"><img src="./images/phone01.png" alt=""></li>
+                                <li class="move05 jj_ani_return"><img src="./images/phone02.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aa-wrap">
+                        <div class="left">
+                            <ul data-aos="fade-up">
+                                <li class="jj_ani_return asdasd">
+                                    <img src="./images/cub01.png" alt="">
+                                </li>
+                                <li class="jj_ani_return asdasd">
+                                    <img src="./images/cub02.png" alt="">
+                                </li>
+                                <li class="jj_ani_return asdasd"></li>
+                                <li class="jj_ani_return asdasd"></li>
+                                <li class="jj_ani_return asdasd">
+                                    <img src="./images/cub05.png" alt="">
+                                </li>
+                                <li class="jj_ani_return asdasd"></li>
+                                <li class="jj_ani_return asdasd">
+                                    <img src="./images/cub07.png" alt="">
+                                </li>
+                                <li class="jj_ani_return asdasd"></li>
+                                <li class="jj_ani_return asdasd"></li>
+                            </ul>
+                            <div class="sub-img" data-aos="fade-up">
+                                <img src="./images/sub01.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="text-box" data-aos="fade-up">
+                                <h4>MAIN</h4>
+                                <div class="explain">
+                                    온천과 건강한 식사, 편안한 휴식, 주변 산세와 정원을 <br />
+                                    차경하며 오롯이 나를 돌아볼 수 있게 하는 곳. <br />
+                                    <br />
+                                    수안보의 아름다운 풍경과 자연이 머물며 <br />
+                                    따뜻한 달빛과 온기가 머물고 여유로운 시간과 온전히 <br />
+                                    나를 돌아보는 마음이 머무는 곳. <br />
+                                </div>
+                            </div>
+                            <div class="sub-img" data-aos="fade-up">
+                                <img src="./images/sub02.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner01" data-aos="fade-up">
+                        <!-- <img src="./images/banner03.png" alt=""> -->
+                        <video loop muted controls playsinline>
+                            <source src="./images/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="gnb_footer marginTop">
+        <div class="hello_jj_wrap">
+            <div class="hellojj"><img src="../images/jj_circle/c_01.png" alt=""></div>
+        </div>
+        <div class="inner">
+            <div class="left">
+                <div class="logo">
+                    CREATIVEAD CHANG
+                </div>
+                <p>
+                    본사. 서울시 성동구 성수일로12길 26 서울숲 코리아IT센터 506호 <br />
+                    전북디자인사무소. 전북 전주시 완산구 홍산로 275, 춘광빌딩 2층 245J <br />
+                    강원디자인사무소. 강원도 원주시 라옹정길 51-3(관설동) 3F 3007호
+                </p>
+                <div class="copy">
+                    Copyright &copy; CREATIVEAD CHANG Inc. All rights reserved.
+                </div>
+            </div>
+            <a class="right" href="#none">
+                <div class="text">
+                    <p>Start a Project</p>
+                    <div class="arrow"><img src="../images/common/footer_arrow.svg" alt="arrow"></div>
+                </div>
+                <div class="box"><img src="../images/common/footer_logo.png" alt="CREATIVEAD CHANG"></div>
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/gnb.js"></script>
+<script src="../js/jj_circle_event.js"></script>
+<script src="../js/jj_scroll_to_move.js"></script>
+
+<script src="../js/jj_script.js"></script>
+<!-- <script src="../js_dev/dev_chang.js"></script> -->
+
+</html>
+
+<!-- <script>
+    let fixed_text = document.querySelector(".sticky-wrap .text-box"),
+        wrap = document.querySelector(".sticky-wrap"),
+        full = document.querySelector(".full");
+    window.addEventListener("DOMContentLoaded", () => {
+        let body = document.querySelector("body");
+        document.querySelector("html").classList.add("stop_scroll");
+        setTimeout(() => {
+            // window.scrollTo({
+            //     top: 0
+            // });
+            document.querySelector("#sub .main").classList.add("load");
+            setTimeout(() => {
+                document.querySelector("html").classList.remove("stop_scroll");
+            }, 3400);
+        }, 100);
+    });
+
+    let text_left = 0;
+    let text_bottom = 0;
+    window.addEventListener("scroll", () => {
+        if(window.innerWidth <= 1024){
+            if(wrap.classList.contains("on")) wrap.classList.remove("on");
+            return false;
+        }
+        text_left = fixed_text.getBoundingClientRect().x + "px";
+        text_bottom = full.offsetTop - parseFloat(window.getComputedStyle(document.querySelector(".detail")).getPropertyValue("padding-bottom")) - fixed_text.offsetHeight - document.querySelector("header").offsetHeight;
+        if (window.scrollY >= wrap.offsetTop - 130) {
+            fixed_text.style.left = text_left;
+            if (window.scrollY >= text_bottom) {
+                if (wrap.classList.contains("on")) wrap.classList.remove("on");
+                if (fixed_text.classList.contains("fixed")) fixed_text.classList.remove("fixed");
+                wrap.classList.add("und");
+            } else {
+                if (fixed_text.classList.contains("und")) fixed_text.classList.remove("und");
+                fixed_text.classList.add("fixed");
+            }
+        } else {
+            if (fixed_text.classList.contains("fixed")) fixed_text.classList.remove("fixed");
+            if (wrap.classList.contains("und")) wrap.classList.remove("und");
+            wrap.classList.add("on");
+        }
+    });
+</script> -->

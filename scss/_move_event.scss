@@ -1,0 +1,183 @@
+#main_page {
+    .ms_02 {
+        .content {
+            dl {
+                &:nth-child(1n) {transform: translate(0,-100px);}
+                &:nth-child(2n) {transform: translate(0,-150px);}
+                &:nth-child(3n) {transform: translate(0,-200px);}
+            }
+        }
+    }
+    .ms_04 {
+        figure {
+            transform: translate(50%, 0);
+        }
+    }
+    .ms_06 {
+        ul {
+            li {
+                &:nth-child(1n) {transform: translate(0,-100px);}
+                &:nth-child(2n) {transform: translate(0,-150px);}
+                &:nth-child(3n) {transform: translate(0,-200px);}
+            }
+        }
+    }
+}
+
+
+#sub.portfolio_youonejae {
+
+    .move01{transform: translate(-50px,100px);}
+    .move02{transform: translate(-50px,150px);}
+    .move03{transform: translate(50px,-50px);}
+    .move04{transform: translate(50px,-200px);}
+    .move05{transform: translate(50px,-150px);}
+
+}
+
+#sub.estimate{
+    // .move01{transform: translate(-100px,0px);}
+    // .move02{transform: translate(-100px,0px);}
+}
+
+#sub.recruitment{
+    .wrap.section01{
+        .move01 {transform: translate(100px,0);}
+        .move02 {transform: translate(-50px,0);}
+        .move03 {transform: translate(50px,0);}
+        .move04 {transform: translate(-50px,0);}
+        .move05 {transform: translate(50px,0);}
+        .move06 {transform: translate(-50px,0);}
+
+    }
+    .wrap.section02{
+        .move01{transform: translate(-100px,0);}
+
+        .move02{transform: translate(0,-150px);}
+        .move03{transform: translate(0,-100px);}
+        .move04{transform: translate(0,-50px);}
+        .move05{transform: translate(0,50px);}
+
+        .move06{transform: translate(0,-150px);}
+        .move07{transform: translate(0,-100px);}
+        .move08{transform: translate(0,-50px);}
+        .move09{transform: translate(0,50px);}
+
+        .move10{transform: translate(0,-150px);}
+        .move11{transform: translate(0,-100px);}
+        .move12{transform: translate(0,-50px);}
+    }
+
+    .wrap.section03{
+        .move01{transform: translate(-50px, 0);}
+        .move02{transform: translate(50px, 0);}
+    }
+}
+
+#sub.overview{
+    .wrap.section01 {
+        &.move01{
+            transform: translate(150px,0);
+        }
+
+    }
+    .wrap.section02{
+        .move01{transform: translate(80px,0);}
+        .move02{transform: translate(-80px,0);}
+        
+        .move03{transform: translate(100px,0);}
+        .move04{transform: translate(-100px,0);}
+        .move05{transform: translate(100px,0);}
+    }
+
+    .wrap.section03{
+        .move01{transform: translate(0,100px);}
+        .move02{transform: translate(0,-100px);}
+
+        .move04{transform: translate(0,100px);}
+        .move05{transform: translate(0,50px);}
+        .move06{transform: translate(0,100px);}
+        .move07{transform: translate(0,50px);}
+    }
+
+    .wrap.section04{
+        .move01{transform: translate(0, -150px);}
+        .move02{transform: translate(0, 50px);}
+        .move03{transform: translate(0, 200px);}
+    }
+}
+
+@media (max-width:1024px){
+    #sub.recruitment{
+        .wrap.section02{
+            .move02{transform: translate(0,-130px);}
+            .move03{transform: translate(0,-80px);}
+            .move04{transform: translate(0,-30px);}
+            
+            .move05{transform: translate(0,-130px);}
+            .move06{transform: translate(0,-80px);}
+            .move07{transform: translate(0,-30px);}
+
+            .move08{transform: translate(0,-130px);}
+            .move09{transform: translate(0,-80px);}
+            .move10{transform: translate(0,-30px);}
+
+            .move11{transform: translate(0,-130px);}
+            .move12{transform: translate(0,-80px);}
+            .move13{transform: translate(0,-30px);}
+        }
+    }
+    #sub.overview{
+        .wrap.section03{
+            .move01{transform: translate(0,50px);}
+            .move02{transform: translate(0,-50px);}
+
+            .move04{transform: translate(0,80px);}
+            .move05{transform: translate(0,30px);}
+            .move06{transform: translate(0,80px);}
+            .move07{transform: translate(0,30px);}
+        }
+        .wrap.section04{
+            .move01{transform: translate(0,-100px);}
+            .move02{transform: translate(0, 50px);}
+            .move03{transform: translate(0, 150px);}
+        }
+    }
+}
+
+@media (max-width: 767px){
+    #sub.recruitment{
+        .wrap.section02,.wrap.section01{
+            *{
+                transform: translate(0,0) !important;
+            }
+
+        }
+    }
+    #sub.overview{
+        .wrap.section03{
+            .move01{transform: translate(0,30px);}
+            .move02{transform: translate(0,-30px);}
+
+            .move04{transform: translate(0,60px);}
+            .move05{transform: translate(0,10px);}
+            .move06{transform: translate(0,60px);}
+            .move07{transform: translate(0,10px);}
+        }
+        .wrap.section04{
+            .move01{transform: translate(0,-50px);}
+            .move02{transform: translate(0, 20px);}
+            .move03{transform: translate(0, 100px);}
+        }
+    }
+}
+
+@media (max-width:540px){
+    #sub.overview{
+        .wrap.section04{
+            .move01{transform: translate(0, -30px);}
+            .move02{transform: translate(0, 30px);}
+            .move03{transform: translate(0, -30px);}
+        }
+    }
+}

@@ -1,0 +1,572 @@
+body {
+    color: #fff;
+    background-color: #000;
+
+    main {
+        position: relative;
+        z-index: 2;
+        &#main_page {
+            @mixin mainContentMargin_01 {
+                margin-top: 200px;
+            }
+
+
+            >section {
+                >article {
+                    @include fixed-layout-marginAuto(1440px);
+                }
+            }
+
+            .ms {
+                overflow: hidden;
+
+                &:not(.ms_01) {
+                    margin-top: 240px;
+                }
+
+                .s_title {
+                    position: relative;
+                    z-index: 10;
+
+                    &.flex {
+                        display: flex;
+                    }
+
+                    h2 {
+                        @include fs-117;
+                        font-weight: 900;
+                        line-height: 1;
+
+                        p {}
+                    }
+
+                    h3 {
+                        @include fs-24;
+
+                        p {}
+                    }
+
+                }
+
+                &.ms_01 {
+                    article {
+                        .wrap {
+                            padding-top: 300px;
+
+                            figure {
+                                figcaption {
+                                    .text_01 {
+                                        @include fs-220;
+                                        font-weight: 900;
+                                        line-height: 1;
+                                    }
+
+                                    .text_02 {
+                                        @include fs-35;
+                                        font-weight: 300;
+                                    }
+
+                                    .text_03 {
+                                        @include fs-24;
+                                    }
+
+                                    .creative_ad_change {
+                                        position: relative;
+                                        display: flex;
+                                        flex-wrap: wrap;
+
+                                        .hello_jj_wrap {
+                                            @include position-absolute-center;
+                                            $wh: 62.5vw;
+                                            width: $wh;
+                                            height: $wh;
+                                            max-width: $wh;
+                                            max-height: $wh;
+                                            min-width: 1400px;
+                                            min-height: 1400px;
+                                        }
+
+                                        .creative {
+                                            position: relative;
+                                            opacity: 0;  
+                                            animation: pos-fade-left 1s .3s forwards;  
+                                        }
+
+                                        .ad {
+                                            padding-left: 40%;
+                                            display: flex;
+                                            align-items: center;
+                                            /* gap: 55px; */
+                                            .text_01{
+                                                position: relative;
+                                                opacity: 0;    
+                                                animation: pos-fade-right 1s .6s forwards;    
+                                            }
+                                            .text_02{
+                                                opacity: 0;
+                                                animation: fade-on 1s .9s forwards;        
+                                            }
+                                        }
+
+                                        .change {
+                                            padding-left: 40%;
+                                            position: relative;
+                                            opacity: 0;    
+                                            animation: pos-fade-left 1s .9s forwards;
+                                        }
+                                    }
+
+                                    .info {
+                                        margin-top: 140px;
+                                    }
+
+                                    .ico_mouse {
+                                        margin: 60px auto 0;
+                                        text-align: center;
+                                        opacity: 0;
+                                        animation: fade-on 1.5s 1.5s forwards;
+
+                                        .wheel {
+                                            animation: mouse_wheel 1s linear infinite;
+                                        }
+                                    }
+
+                                    .btn_01 {
+                                        margin-top: 55px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                &.ms_02 {
+                    margin-top: 240px;
+                    overflow: visible;
+
+                    article {
+                        .s_title {
+                            h2 {
+                                p {}
+                            }
+                        }
+
+                        .wrap {
+                            .content {
+                                @include mainContentMargin_01;
+                                display: flex;
+                                @include el-layout-flex(0px, 100px, 3);
+
+                                dl {
+                                    dt {
+                                        img {}
+
+                                        h2 {
+                                            @include fs-40;
+                                            margin-top: 20px;
+                                            color: $color-df1f26;
+                                        }
+                                    }
+
+                                    dd {
+                                        margin-top: 16px;
+
+                                        p {
+                                            @include fs-14;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                &.ms_03 {
+                    overflow: hidden;
+
+                    article {
+                        .s_title {
+                            h2 {
+                                p {}
+                            }
+
+                        }
+
+                        .wrap {
+                            .content {
+                                @include mainContentMargin_01;
+                                position: relative;
+
+                                &::after,
+                                &::before {
+                                    content: '';
+                                    background-color: #000;
+                                    width: 100vw;
+                                    height: 100%;
+                                    @include draggable_off;
+                                }
+
+                                &::after {
+                                    @include position-absolute(right, 100%, top, 0);
+                                    z-index: 10;
+                                }
+
+                                &::before {
+                                    @include position-absolute(left, 100%, top, 0);
+                                    z-index: 10;
+                                }
+
+                                .swiper-option {
+                                    .swiper-btn {
+                                        z-index: 12;
+
+                                        &-l {
+                                            @include position-absolute(left, -10%, top, 50%);
+                                            transform: translateY(-50%)
+                                        }
+
+                                        &-r {
+                                            @include position-absolute(right, -10%, top, 50%);
+                                            transform: translateY(-50%)
+                                        }
+
+                                    }
+                                }
+
+                                .swiper {
+
+                                    // border: 2px solid #f00;
+                                    .swiper-wrapper {
+                                        .swiper-slide {
+                                            @include transition(all .3s);
+                                            opacity: 0;
+
+                                            &-active {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+
+                                    &.swiper_text {
+                                        width: 50%;
+                                        margin-left: 0;
+                                        padding: 130px 40px 130px 0;
+
+                                        // background-color: #000;
+                                        .swiper-wrapper {
+                                            align-items: center;
+
+                                            .swiper-slide {
+                                                figure {
+                                                    position: relative;
+                                                    display: flex;
+                                                    align-items: center;
+
+                                                    figcaption {
+                                                        width: 100%;
+
+                                                        >* {
+                                                            opacity: 0;
+                                                        }
+
+                                                        >span {
+                                                            @include fs-32;
+                                                            font-weight: 900;
+                                                            color: $color-f01819;
+                                                        }
+
+                                                        >h2 {
+                                                            margin-top: 36px;
+                                                            @include fs-47;
+                                                        }
+
+                                                        >p {
+                                                            @include fs-24;
+                                                            margin-top: 92px;
+                                                        }
+
+                                                        .btn_01 {
+                                                            margin-top: 95px;
+                                                        }
+                                                    }
+
+                                                }
+
+                                                &-active {
+                                                    figure {
+                                                        figcaption {
+                                                            >* {
+                                                                opacity: 1;
+
+                                                                &:nth-child(1) {
+                                                                    transition: opacity 3s;
+                                                                }
+
+                                                                &:nth-child(2) {
+                                                                    transition: opacity 3.4s;
+                                                                }
+
+                                                                &:nth-child(3) {
+                                                                    transition: opacity 3.8s;
+                                                                }
+
+                                                                &:nth-child(4) {
+                                                                    transition: opacity 4.2s;
+                                                                }
+
+                                                                &:nth-child(5) {
+                                                                    transition: opacity 4.6s;
+                                                                }
+                                                            }
+
+
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.swiper_jj {
+                                        @include position-absolute(right, 0, top, 0);
+                                        @include fullsize;
+                                        padding: 0;
+
+                                        figure {
+                                            @include fullsize;
+                                        }
+
+                                        .img_wrap {
+                                            position: relative;
+                                            width: 70%;
+                                            height: 100%;
+                                            margin-left: auto;
+                                            z-index: 2;
+
+                                            >* {
+                                                @include position-absolute-center;
+                                            }
+
+                                            >img {
+                                                z-index: 10;
+                                                max-width: 70%;
+                                                max-height: 70%;
+
+                                            }
+
+                                            .hello_jj_wrap {
+                                                @include fullsize;
+
+                                                .hellojj_slide {
+                                                    @include fullsize;
+
+                                                    img {
+                                                        object-fit: contain;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        canvas {
+                                            // @include fullsize;
+                                        }
+                                    }
+                                }
+
+                                #jjcanvas_02 {
+                                    position: fixed;
+                                    inset: 0;
+                                    z-index: 1;
+                                    pointer-events: none;
+                                    @include transition(opacity .6s);
+
+                                    &.event_show {
+                                        opacity: 0;
+                                        @include transition(opacity 0s);
+                                    }
+
+                                    canvas {
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.ms_04 {
+                    position: relative;
+
+                    .hello_jj_wrap {
+                        $wh: 1600px;
+                        @include position-absolute(left, calc($wh / -2), top, 50%);
+                        transform: translateY(-50%);
+                        @include fixed-wh($wh);
+                    }
+
+                    article {
+                        .s_title {
+                            h2 {
+                                p {}
+                            }
+
+                            h3 {
+                                margin-top: 180px;
+                            }
+                        }
+
+                        .content {
+
+                            @include mainContentMargin_01;
+
+                            figure {
+                                display: flex;
+                                gap: 100px;
+                                align-items: center;
+
+                                .img_wrap {}
+
+                                figcaption {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 60px;
+                                    @include fs-24;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                &.ms_05 {
+                    position: relative;
+
+                    .hello_jj_wrap {
+                        $wh: 1600px;
+                        @include fixed-wh($wh);
+                        @include position-absolute(right, calc($wh / -2), top, 0);
+                    }
+
+                    article {
+                        .s_title {
+                            display: flex;
+                            gap: 50px;
+                            align-items: flex-end;
+                        }
+
+                        .wrap {
+                            .content {
+                                @include mainContentMargin_01;
+
+                                >ul {
+                                    @include el-layout-flex(10px, 40px, 6);
+
+                                    li {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                &.ms_06 {
+                    overflow: visible;
+                    position: relative;
+
+                    article {
+                        .s_title {
+                            display: flex;
+                            gap: 50px;
+                            align-items: flex-end;
+                        }
+
+                        .wrap {
+                            .content {
+                                @include mainContentMargin_01;
+
+                                >ul {
+                                    @include el-layout-flex(60px, 40px, 3);
+
+                                    li {
+                                        text-align: center;
+                                        position: relative;
+
+                                        &::after {
+                                            content: '';
+                                            @include position-absolute(left, 0, bottom, 0);
+                                            width: 100%;
+                                            height: 50%;
+                                            background: linear-gradient(rgba(0, 0, 0, 0), #000);
+                                            opacity: .5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                &.ms_07 {
+                    position: relative;
+                    overflow: visible;
+
+                    article {
+                        .s_title {
+                            justify-content: space-between;
+
+                            .se_07_02 {
+                                padding-left: 50%
+                            }
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 30px;
+                                margin-top: 60px;
+
+                                li {
+                                    @include fs-24;
+                                    line-height: 1;
+
+                                    &.font-47 {
+                                        @include fs-47;
+                                        font-weight: 900;
+                                    }
+
+                                    &.font-12 {
+                                        @include fs-12;
+                                    }
+
+                                    a {
+                                        .ico_wrap {
+                                            @include fixed-wh(40px);
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            align-items: center;
+
+                                            img {}
+                                        }
+
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 14px;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+
+        }
+    }
+}

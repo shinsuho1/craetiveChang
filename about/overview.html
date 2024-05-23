@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------------------SEO-------------------- -->
+    <title><?= $siteSEO['title'] ?></title>
+    <meta name="apple-mobile-web-app-title" content="<?= $siteSEO['title'] ?>">
+    <link rel="canonical" href="<?= $siteSEO['url'] ?>">
+    <link rel="icon" href="<?= $siteSEO['img_favicon'] ?>" type="image/x-icon">
+    <meta name="author" content="Aijin-jj">
+    <meta name="keywords" content="<?= $siteSEO['keywords'] ?>">
+    <meta name="description" content="<?= $siteSEO['description'] ?>">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="<?= $siteSEO['url'] ?>">
+    <meta property="og:image" content="<?= $siteSEO['img_og'] ?>">
+    <meta property="og:title" content="<?= $siteSEO['title'] ?>">
+    <meta property="og:description" content="<?= $siteSEO['description'] ?>">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<?= $siteSEO['title'] ?>">
+    <meta name="twitter:description" content="<?= $siteSEO['description'] ?>">
+    <meta name="twitter:url" content="<?= $siteSEO['url'] ?>">
+    <meta name="twitter:image" content="<?= $siteSEO['img_og'] ?>">
+    <!-- --------------------SEO-------------------- -->
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/gnb.css" data-type="X"> -->
+</head>
+
+<body>
+    <header class="gnb_header">
+        <div class="header-wrap">
+            <div class="inner">
+                <div class="logo-box">
+                    <a href="../main/index.html" class="logo">
+                        <img src="../images/common/header_logo.png" alt="CREATIVEAD CHANG">
+                    </a>
+                    <div class="menuicon-box">
+                        <div class="menuicon">
+                            <span></span>
+                            <span class="top"></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="gnb">
+                    <li>
+                        <div class="a-box">
+                            <a href="/main/index.html" class="normal">About</a>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="../about/overview.html">OVERVIEW</a>
+                            </li>
+                            <li>
+                                <a href="#none">CERTIFICATION</a>
+                            </li>
+                            <li>
+                                <a href="#none">CONTACT</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="#none" class="normal">Client</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="../portfolio/detail.html" class="normal">Portfolio</a>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="../portfolio/detail.html">브랜딩</a>
+                            </li>
+                            <li>
+                                <a href="#none">인쇄제작물</a>
+                            </li>
+                            <li>
+                                <a href="#none">광고홍보</a>
+                            </li>
+                            <li>
+                                <a href="#none">웹</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="../estimate/estimate.html" class="normal">Estimate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="a-box">
+                            <a href="../recruitment/recruitment.html" class="normal">Recruitment</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="util">
+            <ul class="sns">
+                <li>
+                    <a href="#none">
+                        <img src="../images/common/icon-kakao.svg" alt="">
+                        <!-- <i class="fa-brands fa-instagram"></i> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="../images/common/icon-youtube.svg" alt="">
+                        <!-- <i class="fa-brands fa-x-twitter"></i> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="../images/common/icon-mail.svg" alt="">
+                        <!-- <i class="fa-brands fa-youtube"></i> -->
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#none">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <div class="side">
+            <div class="inner">
+                <div class="head">
+                    <a href="../main/index.html" class="logo">
+                        <img src="../images/common/header_logo.png" alt="CREATIVEAD CHANG">
+                    </a>
+                    <div class="close_btn">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="center">
+                    <ul class="gnb">
+                        <li>
+                            <div class="a-box">
+                                <a href="../main/index.html" class="normal">HOME</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="#none" class="normal">ABOT</a>
+                            </div>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="../about/overview.html">OVERVIEW</a>
+                                </li>
+                                <li>
+                                    <a href="#none">CERTIFICATION</a>
+                                </li>
+                                <li>
+                                    <a href="#none">CONTACT</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="#none" class="normal">CLIENT</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="#none" class="normal">PORTFOLIO</a>
+                            </div>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#none">브랜딩</a>
+                                </li>
+                                <li>
+                                    <a href="#none">인쇄제작물</a>
+                                </li>
+                                <li>
+                                    <a href="#none">광고홍보</a>
+                                </li>
+                                <li>
+                                    <a href="#none">웹</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="../estimate/estimate.html" class="normal">ESTIMATE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="a-box">
+                                <a href="../recruitment/recruitment.html" class="normal">RECRUITMENT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    <div class="box">
+                        <ul class="sns">
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/common/icon-kakao.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/common/icon-youtube.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <img src="../images/common/icon-mail.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        Copyright &copy; CREATIVEAD CHANG Inc.<br class="mo-only" /> All rights reserved.
+
+                    </div>
+                    <a href="#none" class="project-btn">
+                        <div class="text">
+                            <p>Start a Project</p>
+                            <div class="arrow"><img src="../images/common/footer_arrow.svg" alt="arrow"></div>
+                        </div>
+                        <div class="box"><img src="../images/common/footer_logo.png" alt="CREATIVEAD CHANG"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="sub" class="overview">
+            <div class="inner">
+                <div class="main01-bg circle-bg">
+                    <div class="hellojj"><img src="../images/removeBg_circle/c_06.png" alt=""></div>
+                </div>
+                <div class="main01">
+                    <div class="title01">
+                        <div class="top">
+                            <span class="move01 jj_ani_return">WHO</span>
+                            <div class="text move02 jj_ani_return">
+                                고객과 기업 <br />
+                                그리고 <br />
+                                소비자의 마음을 여는 창
+                            </div>
+                        </div>
+                        <p>
+                            <span class="move03 jj_ani_return">WE ARE</span>
+                        </p>
+                    </div>
+                    <div class="img-wrap move04 jj_ani_return">
+                        <img src="../images/about/overview/sectionMain.png" alt="">
+                    </div>
+                    <div class="ico_mouse">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_28_2)">
+                                <path d="M30 56.6666C25.5798 56.6666 21.3405 54.9107 18.2149 51.7851C15.0893 48.6595 13.3334 44.4203 13.3334 40V20C13.3334 15.5797 15.0893 11.3405 18.2149 8.21487C21.3405 5.08926 25.5798 3.33331 30 3.33331C34.4203 3.33331 38.6595 5.08926 41.7852 8.21487C44.9108 11.3405 46.6667 15.5797 46.6667 20V40C46.6667 42.1887 46.2356 44.3559 45.398 46.378C44.5605 48.4001 43.3328 50.2374 41.7852 51.7851C40.2375 53.3327 38.4002 54.5604 36.3781 55.398C34.356 56.2356 32.1887 56.6666 30 56.6666ZM30 6.66665C26.4638 6.66665 23.0724 8.0714 20.5719 10.5719C18.0715 13.0724 16.6667 16.4638 16.6667 20V40C16.6667 43.5362 18.0715 46.9276 20.5719 49.4281C23.0724 51.9286 26.4638 53.3333 30 53.3333C33.5363 53.3333 36.9276 51.9286 39.4281 49.4281C41.9286 46.9276 43.3334 43.5362 43.3334 40V20C43.3334 16.4638 41.9286 13.0724 39.4281 10.5719C36.9276 8.0714 33.5363 6.66665 30 6.66665Z" fill="white" />
+                                <path class="wheel" d="M30 25C29.558 25 29.1341 24.8244 28.8215 24.5118C28.509 24.1993 28.3334 23.7754 28.3334 23.3333V16.6667C28.3334 16.2246 28.509 15.8007 28.8215 15.4882C29.1341 15.1756 29.558 15 30 15C30.4421 15 30.866 15.1756 31.1786 15.4882C31.4911 15.8007 31.6667 16.2246 31.6667 16.6667V23.3333C31.6667 23.7754 31.4911 24.1993 31.1786 24.5118C30.866 24.8244 30.4421 25 30 25Z" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_28_2">
+                                    <rect width="60" height="60" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wrap section01 move01 jj_ani_return">
+                    <h2>OverView</h2>
+                    <p>
+                        (주)크리에이티브애드 창은 혁신적인 전략마케팅과 <br />
+                        창조적인 아이디어와 아트워크를 기반으로 <br />
+                        홍보기획 부터 네이밍, CI·BI 브랜딩개발,패키지디자인, <br />
+                        편집출판디자인, 광고디자인, 웹디지털디자인까지 <br />
+                        온오프라인이 구분 없는 통합 브랜딩디자인 솔루션을 제공합니다. <br />
+                        브랜드 핵심 가치를 정확히 파악해 클라이언트의 마케팅 목표를 달성하는 <br />
+                        <br />
+                        Design Integrated Management! <br />
+                        크리에이티브애드 창이 가장 잘 알고, 가장 잘 하는 일입니다.
+                    </p>
+                    <div class="section01-bg circle-bg">
+                        <div class="hellojj"><img src="../images/removeBg_circle/c_01.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="wrap section02">
+                    <div class="title">
+                        <p class="move01 jj_ani_return">CREATIVEAD</p>
+                        <p class="move02 jj_ani_return">CHANG MEANS?</p>
+                    </div>
+                    <ul>
+                        <li class="move03 jj_ani_return">
+                            <div class="img-wrap">
+                                <img src="../images/about/overview/section03_01.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Our Mission</h3>
+                                <p>
+                                    크리에이티브한 디자인 가치창조로 <br />
+                                    소비자의 일상생활에 스며들어 삶을 풍요롭고 <br />
+                                    윤택하게 하는 것이 우 리의 최우선 목표입니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="move04 jj_ani_return">
+                            <div class="text">
+                                <h3>Our Vision</h3>
+                                <p>
+                                    목표는 담대하게, 소통은 적극적으로, <br />
+                                    혁신은 지속적으로! 우리는 고객의 가치와 비례해 <br />
+                                    함께 성장하기에 고객중심의 핵심가치를 높일 수 있는 <br />
+                                    Customer Value Explorer입니다.
+                                </p>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="../images/about/overview/section03_02.png" alt="">
+                            </div>
+                        </li>
+                        <li class="move05 jj_ani_return">
+                            <div class="img-wrap">
+                                <img src="../images/about/overview/section03_03.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Core Value</h3>
+                                <p>
+                                    우리에게 고객은 직원, 파트너사, <br />
+                                    그리고 고객의 고객까지 포함되며 현재와 미래의 <br />
+                                    성장에 가장 큰 힘이됩 니다. <br />
+                                    이 모두를 만족시키기 위해 수준높은 품질과 서비스로 <br />
+                                    Integrated Design Consulting을 <br />
+                                    제공하 는 것이 우리의 가치실현 입니다.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrap section03">
+                    <div class="section03-bg circle-bg">
+                        <div class="hellojj"><img src="../images/removeBg_circle/c_01.png" alt=""></div>
+                    </div>
+                    <div class="right">
+                        <div class="title">
+                            <p class="move01 jj_ani_return">PROMISE</p>
+                            <p class="move02 jj_ani_return">OUR</p>
+                        </div>
+                        <ul>
+                            <li class="move03 jj_ani_return">
+                                <div class="icon-wrap">
+                                    <img src="../images/about/overview/section03_icon01.png" alt="">
+                                </div>
+                                <strong>Responsibility</strong>
+                                <p>
+                                    우리는 책임과 긍지를 가지고 일합니다. <br />
+                                    책임을 다해 만든 결과물은 긍지가 되어 빛납니다.
+                                </p>
+                            </li>
+                            <li class="move04 jj_ani_return">
+                                <div class="icon-wrap">
+                                    <img src="../images/about/overview/section03_icon02.png" alt="">
+                                </div>
+                                <strong>Enjoy</strong>
+                                <p>
+                                    우리는 긍정적인 마인드를 추구합니다. <br />
+                                    즐거운 마음을 에너지 삼아 <br />
+                                    크리에이티브력을 발휘합니다.
+                                </p>
+                            </li>
+                            <li class="move05 jj_ani_return">
+                                <div class="icon-wrap">
+                                    <img src="../images/about/overview/section03_icon03.png" alt="">
+                                </div>
+                                <strong>Love</strong>
+                                <p>
+                                    우리는 가슴에 열정을 품고 있습니다. <br />
+                                    자신의 일을 사랑하기에 열정을 다해 헌신합니다.
+                                </p>
+                            </li>
+                            <li class="move06 jj_ani_return">
+                                <div class="icon-wrap">
+                                    <img src="../images/about/overview/section03_icon04.png" alt="">
+                                </div>
+                                <strong>Promise</strong>
+                                <p>
+                                    우리는 약속을 소중히 여깁니다. <br />
+                                    클리이언트, 동료, 자기 자신 <br />
+                                    그 누구와의 약속도 소홀이 하지 않습니다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrap section04">
+                    <ul>
+                        <li class="move01 jj_ani_return blur_01"><img src="../images/about/overview/section04_01.png" alt=""></li>
+                        <li class="move02 jj_ani_return blur_01"><img src="../images/about/overview/section04_02.png" alt=""></li>
+                        <li class="move03 jj_ani_return blur_01"><img src="../images/about/overview/section04_03.png" alt=""></li>
+                    </ul>
+                    <div class="hello_jj_wrap">
+                        <div class="hellojj"><img src="../images/about/overview/section04_circle.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="gnb_footer marginTop">
+        <!-- <div class="hello_jj_wrap circle-bg">
+            <div class="hellojj"><img src="../images/removeBg_circle/c_01.png" alt=""></div>
+        </div> -->
+        <div class="inner">
+            <div class="left">
+                <div class="logo">
+                    CREATIVEAD CHANG
+                </div>
+                <p>
+                    본사. 서울시 성동구 성수일로12길 26 서울숲 코리아IT센터 506호 <br />
+                    전북디자인사무소. 전북 전주시 완산구 홍산로 275, 춘광빌딩 2층 245J <br />
+                    강원디자인사무소. 강원도 원주시 라옹정길 51-3(관설동) 3F 3007호
+                </p>
+                <div class="copy">
+                    Copyright &copy; CREATIVEAD CHANG Inc. All rights reserved.
+                </div>
+            </div>
+            <a class="right" href="#none">
+                <div class="text">
+                    <p>Start a Project</p>
+                    <div class="arrow"><img src="../images/common/footer_arrow.svg" alt="arrow"></div>
+                </div>
+                <div class="box"><img src="../images/common/footer_logo.png" alt="CREATIVEAD CHANG"></div>
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/gnb.js"></script>
+<script src="../js/jj_circle_event.js"></script>
+<script src="../js/jj_scroll_to_move.js"></script>
+
+<script src="../js/jj_script.js"></script>
+<!-- <script src="../js_dev/dev_chang.js"></script> -->
+
+</html>

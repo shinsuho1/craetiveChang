@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<?
+$siteSEO = [
+    'title' => '타이틀',
+    'url' => 'url',
+    'keywords' => '타이틀',
+    'description' => '타이틀 공식 홈페이지입니다.',
+    'img_og' => '/og_img.jpg',
+    'img_favicon' => '/favicon.ico',
+];
+?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+
+    
+    <!-- --------------------SEO-------------------- -->
+    <title><?= $siteSEO['title'] ?></title>
+    <meta name="apple-mobile-web-app-title" content="<?= $siteSEO['title'] ?>">
+    <link rel="canonical" href="<?= $siteSEO['url'] ?>">
+    <link rel="icon" href="<?=$siteSEO['img_favicon']?>" type="image/x-icon">
+    <meta name="author" content="Aijin-jj">
+    <meta name="keywords" content="<?= $siteSEO['keywords'] ?>">
+    <meta name="description" content="<?= $siteSEO['description'] ?>">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="<?= $siteSEO['url'] ?>">
+    <meta property="og:image" content="<?= $siteSEO['img_og'] ?>">
+    <meta property="og:title" content="<?= $siteSEO['title'] ?>">
+    <meta property="og:description" content="<?= $siteSEO['description'] ?>">
+
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<?= $siteSEO['title'] ?>">
+    <meta name="twitter:description" content="<?= $siteSEO['description'] ?>">
+    <meta name="twitter:url" content="<?= $siteSEO['url'] ?>">
+    <meta name="twitter:image" content="<?= $siteSEO['img_og'] ?>">
+    <!-- --------------------SEO-------------------- -->
+
+
+</head>
+
+
+<?
+#header("HTTP/1.1 301 Moved Permanently");
+#header("Location: ./contact/");
+#exit;
+if (preg_match('/ko/', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    header("Location: /kor/");
+} else {
+    header("Location: /eng/");
+}
+exit;
+?>
