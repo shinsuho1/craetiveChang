@@ -48,6 +48,21 @@ body {
 
                 }
 
+                .text_01 {
+                    @include fs-220;
+                    font-weight: 900;
+                    line-height: 1;
+                }
+
+                .text_02 {
+                    @include fs-35;
+                    font-weight: 300;
+                }
+
+                .text_03 {
+                    @include fs-24;
+                }
+
                 &.ms_01 {
                     article {
                         .wrap {
@@ -55,20 +70,6 @@ body {
 
                             figure {
                                 figcaption {
-                                    .text_01 {
-                                        @include fs-220;
-                                        font-weight: 900;
-                                        line-height: 1;
-                                    }
-
-                                    .text_02 {
-                                        @include fs-35;
-                                        font-weight: 300;
-                                    }
-
-                                    .text_03 {
-                                        @include fs-24;
-                                    }
 
                                     .creative_ad_change {
                                         position: relative;
@@ -148,7 +149,11 @@ body {
                     article {
                         .s_title {
                             h2 {
-                                p {}
+                                p {
+                                    &:nth-child(2){
+                                        padding-left: 160px
+                                    }
+                                }
                             }
                         }
 
@@ -156,7 +161,7 @@ body {
                             .content {
                                 @include mainContentMargin_01;
                                 display: flex;
-                                @include el-layout-flex(0px, 100px, 3);
+                                @include el-layout-flex(0px, 150px, 3);
 
                                 dl {
                                     dt {
@@ -173,7 +178,9 @@ body {
                                         margin-top: 16px;
 
                                         p {
-                                            @include fs-14;
+                                            @include fs-20;
+                                            font-weight: normal;
+                                            line-height: 1.5;
                                         }
                                     }
                                 }
@@ -185,15 +192,7 @@ body {
 
                 &.ms_03 {
                     overflow: hidden;
-
                     article {
-                        .s_title {
-                            h2 {
-                                p {}
-                            }
-
-                        }
-
                         .wrap {
                             .content {
                                 @include mainContentMargin_01;
@@ -221,7 +220,11 @@ body {
                                 .swiper-option {
                                     .swiper-btn {
                                         z-index: 12;
-
+                                        img{
+                                            width: 84px;
+                                            aspect-ratio: 1/1;
+                                            object-fit: cover;
+                                        }
                                         &-l {
                                             @include position-absolute(left, -10%, top, 50%);
                                             transform: translateY(-50%)
@@ -409,7 +412,9 @@ body {
                     article {
                         .s_title {
                             h2 {
-                                p {}
+                                .se_04_02{
+                                    padding-left: 200px;
+                                }
                             }
 
                             h3 {
@@ -454,6 +459,9 @@ body {
                             display: flex;
                             gap: 50px;
                             align-items: flex-end;
+                            .se_05_02{
+                                padding-left: 100px;
+                            }
                         }
 
                         .wrap {
@@ -464,7 +472,14 @@ body {
                                     @include el-layout-flex(10px, 40px, 6);
 
                                     li {
-                                        text-align: center;
+                                        img{
+                                            width: 100%;
+                                            object-fit: contain;
+                                        }
+                                        a{
+                                            display: flex;
+                                            padding: 0px 30px;
+                                        }
                                     }
                                 }
                             }
@@ -520,7 +535,7 @@ body {
                             justify-content: space-between;
 
                             .se_07_02 {
-                                padding-left: 50%
+                                padding-left: 90%;
                             }
 
                             ul {

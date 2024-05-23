@@ -37,7 +37,7 @@ main {
                             font-weight: 900;
                             line-height: 1;
                             position: relative;
-                            opacity: 0;
+                            // opacity: 0;
                         }
 
                         .top {
@@ -46,7 +46,7 @@ main {
                             align-items: center;
                             gap: 70px;
                             span{
-                                animation: pos-fade-left 1s .3s forwards;
+                                // animation: pos-fade-left 1s .3s forwards;
                             }
                         }
 
@@ -55,15 +55,15 @@ main {
                             line-height: 1.5;
                             font-weight: 300;
                             margin-top: 25px;
-                            opacity: 0;
+                            // opacity: 0;
                             position: relative;
-                            animation: fade-on 1s .9s forwards;
+                            // animation: fade-on 1s .9s forwards;
                         }
 
                         p {
                             padding-left: 18%;
                             span{
-                                animation: pos-fade-right 1s .6s forwards;    
+                                // animation: pos-fade-right 1s .6s forwards;    
                             }
                         }
                     }
@@ -74,8 +74,8 @@ main {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        opacity: 0;
-                        animation: fade-on 1s .9s forwards;
+                        // opacity: 0;
+                        // animation: fade-on 1s .9s forwards;
                         img {
                             max-width: 370px;
                             width: 100%;
@@ -240,13 +240,15 @@ main {
                                     @include fs-20;
                                     line-height: 1.3;
                                 }
+                                &:nth-of-type(2n){
+                                    margin-top: 100px;
+                                }
                             }
                         }
                     }
 
                     &.section04 {
                         padding: 100px 0 300px;
-                        position: relative;
                         ul {
                             display: flex;
                             flex-wrap: wrap;
@@ -266,33 +268,45 @@ main {
                     }
                 }
 
-                .section04 {
-                    .hello_jj_wrap {
-                        position: absolute;
-                        $wh : 1000px;
-                        width: $wh;
-                        height: $wh;
-                        max-width: $wh;
-                        max-height: $wh;
-                        min-width: $wh;
-                        min-height: $wh;
-                        top: calc($wh / 2);
-                        .hellojj{
-                         /*    $wh : 35.2vw;
-                            width:  $wh;
-                            height:  $wh;
-                            max-height:  $wh;
-                            max-width:  $wh;
-                            min-width: 700px;
-                            min-height: 700px;
-                            // bottom: calc($wh / -2.5);
-                            top: calc($wh / -2);
-                            z-index: 1;
-                            left: 60px; */
-                        }
-                    }
+                .section04-bg{
+                    $wh : 35.2vw;
+                    width:  $wh;
+                    height:  $wh;
+                    max-height:  $wh;
+                    max-width:  $wh;
+                    min-width: 700px;
+                    min-height: 700px;
+                    bottom: calc($wh / -2.5);
+                    z-index: 1;
+                    left: 60px;
                 }
-                
+
+                // .section04 {
+                //     .hello_jj_wrap {
+                //         position: absolute;
+                //         $wh : 1000px;
+                //         width: $wh;
+                //         height: $wh;
+                //         max-width: $wh;
+                //         max-height: $wh;
+                //         min-width: $wh;
+                //         min-height: $wh;
+                //         top: calc($wh / 2);
+                //         .hellojj{
+                //          /*    $wh : 35.2vw;
+                //             width:  $wh;
+                //             height:  $wh;
+                //             max-height:  $wh;
+                //             max-width:  $wh;
+                //             min-width: 700px;
+                //             min-height: 700px;
+                //             // bottom: calc($wh / -2.5);
+                //             top: calc($wh / -2);
+                //             z-index: 1;
+                //             left: 60px; */
+                //         }
+                //     }
+                // }
             }
         }
     }

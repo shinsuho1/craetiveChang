@@ -130,7 +130,7 @@ $color-f01819 : #f01819;
 
 // ====================================JJ MIXIN====================================
 @mixin fs-220 {font-size: 22rem;}
-@mixin fs-117 {font-size: 11.7rem;}
+@mixin fs-117 {font-size: 117px;}
 @mixin fs-47 {font-size: 47px}
 @mixin fs-40 {font-size: 40px;}
 @mixin fs-35 {font-size: 35px;}
@@ -348,6 +348,7 @@ body {
           position: relative;
           border: 1px solid #ddd;
           background-color: #000; border-radius: 100%;
+          background-color: transparent;
           overflow: hidden;
           &::after {
               content: '';

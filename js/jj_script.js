@@ -1,3 +1,13 @@
+/**
+    function se_master(element, dir, el_parent = null, pxX = null, pxY = null, v_start = null, v_end = null)
+    * @param {Element} element *필수 Element 요소 (document.querySelector('선택자'))
+    * @param {String} dir *필수 방향 (t, b, lt, rt, lb, rb, r, l)
+    * @param {Element|null} el_parent 기준부모 (없으면 자신)
+    * @param {Number|string|null} pxX 움직일 X축 
+    * @param {Number|string|null} pxY 움직일 Y축
+    * @param {Number|string|null} v_start 요소의 ??, 화면의 ??에 도달할 때 시작
+    * @param {Number|string|null} v_end   요소의 ??, 화면의 ??에 도달할 때 끝
+*/
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -5,52 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ms_01 */
     se_master(document.querySelector('.ms_01 .creative .text_01'), "lt", '', '', '', '0% 10%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .ad .text_01'), "l", '', '', '', '0% 20%', '-40% -40%')
+    se_master(document.querySelector('.ms_01 .ad .text_01'), "l", '', '', '', '0% 10%', '-40% -40%')
     se_master(document.querySelector('.ms_01 .ad .text_02 '), "rb", '', '', '', '0% 20%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .change .text_01'), "lb", '', '', '', '0% 40%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%')
-    se_master(document.querySelector('.ms_01 .info .text_03'), "rb", '', '', '', '0% 80%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .btn_01'), "l", '', '', '', '0% 80%', '-40% -40%')
+    se_master(document.querySelector('.ms_01 .change .text_01'), "lb", '', '', '', '0% 20%', '-40% -40%')
+    se_master(document.querySelector('.ms_01 .ico_mouse'), "rt", '', '', '', '0% 40%', '-40% -40%')
+    se_master(document.querySelector('.ms_01 .info .text_03'), "rb", '', '', '', '0% 20%', '-40% -40%')
+    se_master(document.querySelector('.ms_01 .btn_01'), "l", '', '', '', '0% 40%', '-40% -40%')
 
 
-
-
-
-    se_master(document.querySelector('.ms_02 .se_01_01'), "l")
-    se_master(document.querySelector('.ms_02 .se_01_02'), "r")
-    /* 
-    document.querySelectorAll('.ms_02 .se_ltt').forEach(function(el,idx){
-        se_master(el,"t",document.querySelector('.ms_02'),0, 200+((idx % 3)*50))
-    });
- */
-
-    se_master(document.querySelector('.ms_03 .s_title h2 p'), "l")
-    // se_master(document.querySelector('.ms_03 .content .swiper_jj'),"t",document.querySelector('.ms_03'),0,200)
-    // se_master(document.querySelector('.ms_03 .content .swiper_text '),"t",document.querySelector('.ms_03'),0,200)
-
-
-
-    se_master(document.querySelector('.ms_04 .se_04_01'), "l")
-    se_master(document.querySelector('.ms_04 .se_04_02'), "r")
-    se_master(document.querySelector('.ms_04 .se_04_03'), "t", document.querySelector('.ms_04'), 0, 200)
-
-
-
-    se_master(document.querySelector('.ms_05 .se_05_01'), "l")
-    se_master(document.querySelector('.ms_05 .se_05_02'), "r")
-    se_master(document.querySelector('.ms_05 .se_05_03'), "rt")
     se_master(document.querySelector('.ms_05 .content'), "t", document.querySelector('.ms_05'))
-
-
-
-    se_master(document.querySelector('.ms_06 .se_06_01'), "l", document.querySelector('.ms_06 .s_title'))
-    se_master(document.querySelector('.ms_06 .se_06_02'), "r", document.querySelector('.ms_06 .s_title'))
-
-
-
-    se_master(document.querySelector('.ms_07 .se_07_01'), "l", document.querySelector('.ms_07 .s_title'))
-    se_master(document.querySelector('.ms_07 .se_07_02'), "r", document.querySelector('.ms_07 .s_title'), '50%')
-    se_master(document.querySelector('.ms_07 .se_07_03'), "lt", document.querySelector('.ms_07 .s_title'))
 
     /* estimate */
     se_master(document.querySelector('#sub.estimate .main01 .move01'), "r", '', '100', '', '0% 10%', '-40% -40%')
@@ -73,27 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.jj_ani_return').forEach(function (el) {
         se_master(el, "return");
     });
-
-    window.addEventListener("resize", function (e) {
-        // console.log(e);
-        // let inw = window.innerWidth;
-        document.querySelectorAll('.jj_ani_return').forEach(function (el) {
-            se_master(el, "return");
-        });
-    }
-    );
-
 });
 
-/**
-    function se_master(element, dir, el_parent = null, pxX = null, pxY = null, v_start = null, v_end = null)
-    * @param {Element} element *필수 Element 요소 (document.querySelector('선택자'))
-    * @param {String} dir *필수 방향 (t, b, lt, rt, lb, rb, r, l)
-    * @param {Element|null} el_parent 기준부모 (없으면 자신)
-    * @param {Number|string|null} pxX 움직일 X축 
-    * @param {Number|string|null} pxY 움직일 Y축
-    * @param {Number|string|null} v_start 요소의 ??, 화면의 ??에 도달할 때 시작
-    * @param {Number|string|null} v_end   요소의 ??, 화면의 ??에 도달할 때 끝
-*/
 
 

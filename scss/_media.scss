@@ -32,8 +32,10 @@
     }
 }
 @media (max-width:1440px){
+    @mixin fs-117{font-size: 100px;}
     @mixin fs-75{font-size: 65px;}
     @mixin fs-48{font-size: 40px;}
+    @mixin fs-47{font-size: 38px;}
     @mixin fs-40{font-size: 32px;}
     @mixin fs-35{font-size: 30px;}
     @mixin fs-30{font-size: 24px;}
@@ -47,14 +49,32 @@
     body{
         main{
             &#main_page{
+                @mixin mainContentMargin_01{
+                    margin-top: 140px;
+                }
                 >section {
                     >article {
                         padding: 0 4%;
+                        margin: 0;
                     }
                 }
                 .ms{
                     &:not(.ms_01) {
                         margin-top: 200px;
+                    }
+                    .s_title{
+                        h2{
+                            @include fs-117;
+                        }
+                        h3{
+                            @include fs-24;
+                        }
+                    }
+                    .text_02{
+                        @include fs-35;
+                    }
+                    .text_03{
+                        @include fs-24;
                     }
                     &.ms_01{
                         article{
@@ -62,12 +82,6 @@
                                 padding-top: 200px;
                                 figure{
                                     figcaption{
-                                        .text_02{
-                                            @include fs-35;
-                                        }
-                                        .text03{
-                                            @include fs-24;
-                                        }
                                         .creative_ad_change{
                                             flex-direction: column;
                                             justify-content: center;
@@ -96,17 +110,192 @@
                                         }
                                         
                                         .info{
-                                            margin-top: 120px;
-                                        }
-                                        .ico_mouse{
-                                            margin: 40px auto 0;
+                                            margin-top: 80px;
                                         }
                                     }
                                 }
                             }
                         }
                     }
+                    &.ms_02 {
+                        margin-top: 200px;
+                        article {
+                            .s_title {
+                                h2 {
+                                    p {
+                                        &:nth-child(2){
+                                            padding-left: 140px;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    @include el-layout-flex(0px, 120px, 3);
+    
+                                    dl {
+                                        dt {
+                                            h2 {
+                                                @include fs-40;
+                                                margin-top: 15px;
+                                            }
+                                        }
+    
+                                        dd {
+                                            margin-top: 10px;
+                                            p {
+                                                @include fs-20;
+                                            }
+                                        }
+                                    }
+    
+                                }
+                            }
+                        }
+                    }
+                    &.ms_03 {
+                        article {
+                            .wrap {
+                                .content {
+                                    // padding: 0 4%;
+                                    @include mainContentMargin_01;
+                                    position: relative;
+                                    .swiper-option {
+                                        .swiper-btn {
+                                            img{
+                                                width: 54px;
+                                            }
+                                            &-l {
+                                                @include position-absolute(left, -3%, top, 50%);
+                                            }
+    
+                                            &-r {
+                                                @include position-absolute(right, -3%, top, 50%);
+                                            }
+    
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.ms_04 {
+                        .hello_jj_wrap {
+                            $wh: 1300px;
+                            @include position-absolute(left, calc($wh / -2), top, 50%);
+                            @include fixed-wh($wh);
+                        }
+    
+                        article {
+                            .s_title {
+                                h2{
+                                    .se_04_02{
+                                        padding-left: 160px;
+                                    }
+                                }
+                                h3 {
+                                    margin-top: 100px;
+                                }
+                            }
+    
+                            .content {
+    
+                                @include mainContentMargin_01;
+    
+                                figure {
+                                    gap: 80px;
+                                    figcaption {
+                                        gap: 50px;
+                                        @include fs-24;
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+
+                    &.ms_05 {
+                        article {
+                            .s_title {
+                                gap: 40px;
+                                .se_05_02{
+                                    padding-left: 90px;
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(10px, 30px, 6);
+                                        li{
+                                            a{
+                                                padding: 0 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                    &.ms_06 {
+                        article {
+                            .s_title {
+                                gap: 40px;
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(40px, 40px, 3);
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                    &.ms_07 {
+                        article {
+                            .s_title {
+    
+                                ul {
+                                    gap: 20px;
+                                    margin-top: 50px;
+    
+                                    li {
+                                        @include fs-24;
+                                        &.font-47 {
+                                            @include fs-47;
+                                        }
+    
+                                        &.font-12 {
+                                            @include fs-12;
+                                        }
+    
+                                        a {
+                                            .ico_wrap {
+                                                @include fixed-wh(40px);
+                                            }
+                                            gap: 14px;
+    
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
                 }
+            }
+        }
+        .btn_01 {
+            $wh : 78px;
+            .ico_wrap {
+                @include fixed-wh($wh);
             }
         }
     }
@@ -404,6 +593,7 @@
             }
         }
     }
+
 }
 @media (max-width:1200px){
    main{
@@ -423,8 +613,10 @@
    }
 }
 @media (max-width:1024px){
+    @mixin fs-117{font-size: 90px;}
     @mixin fs-75{font-size: 45px;}
     @mixin fs-48{font-size: 32px;}
+    @mixin fs-47{font-size: 30px;}
     @mixin fs-40{font-size: 26px;}
     @mixin fs-35{font-size: 24px;}
     @mixin fs-30{font-size: 20px;}
@@ -437,9 +629,26 @@
     body{
         main{
             &#main_page{
+                @mixin mainContentMargin_01{
+                    margin-top: 120px;
+                }
                 .ms{
                     &:not(.ms_01) {
                         margin-top: 150px;
+                    }
+                    .s_title{
+                        h2{
+                            @include fs-117;
+                        }
+                        h3{
+                            @include fs-24;
+                        }
+                    }
+                    .text_02{
+                        @include fs-35;
+                    }
+                    .text_03{
+                        @include fs-24;
                     }
                     &.ms_01{
                         article{
@@ -447,12 +656,6 @@
                                 padding-top: 150px;
                                 figure{
                                     figcaption{
-                                        .text_02{
-                                            @include fs-35;
-                                        }
-                                        .text03{
-                                            @include fs-24;
-                                        }
                                         .creative_ad_change{
                                             .hello_jj_wrap{
                                                 min-width: 900px;
@@ -467,17 +670,169 @@
                                         }
                                         
                                         .info{
-                                            margin-top: 120px;
+                                            margin-top: 60px;
                                         }
-                                        .ico_mouse{
-                                            margin: 40px auto 0;
+                                        .btn_01{
+                                            margin-top: 40px;
                                         }
                                     }
                                 }
                             }
                         }
                     }
+                    &.ms_02 {
+                        margin-top: 150px;
+                        article {
+                            .s_title {
+                                h2 {
+                                    p {
+                                        &:nth-child(2){
+                                            padding-left: 120px;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    @include el-layout-flex(0px, 100px, 3);
+    
+                                    dl {
+                                        dt {
+                                            h2 {
+                                                @include fs-40;
+                                                margin-top: 10px;
+                                            }
+                                        }
+    
+                                        dd {
+                                            margin-top: 5px;
+                                            p {
+                                                @include fs-20;
+                                            }
+                                        }
+                                    }
+    
+                                }
+                            }
+                        }
+                    }
+
+                    &.ms_04 {
+                        .hello_jj_wrap {
+                            // $wh: 900px;
+                            // @include position-absolute(left, calc($wh / -2), top, 50%);
+                            // @include fixed-wh($wh);
+                        }
+    
+                        article {
+                            .s_title {
+                                h2{
+                                    .se_04_02{
+                                        padding-left: 140px;
+                                    }
+                                }
+                                h3 {
+                                    margin-top: 60px;
+                                }
+                            }
+    
+                            .content {
+    
+                                @include mainContentMargin_01;
+    
+                                figure {
+                                    gap: 60px;
+                                    figcaption {
+                                        gap: 40px;
+                                        @include fs-24;
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+                    &.ms_05 {
+                        article {
+                            .s_title {
+                                gap: 30px;
+                                .se_05_02{
+                                    padding-left: 80px;
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(10px, 20px, 5);
+                                        li{
+                                            a{
+                                                padding: 0 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                    &.ms_06 {
+                        article {
+                            .s_title {
+                                gap: 30px;
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(20px, 20px, 3);
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                    &.ms_07 {
+                        article {
+                            .s_title {
+                                ul {
+                                    gap: 15px;
+                                    margin-top: 40px;
+                                    li {
+                                        @include fs-24;
+                                        &.font-47 {
+                                            @include fs-47;
+                                        }
+    
+                                        &.font-12 {
+                                            @include fs-12;
+                                        }
+    
+                                        a {
+                                            .ico_wrap {
+                                                @include fixed-wh(30px);
+                                            }
+                                            gap: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
                 }
+            }
+        }
+        .btn_01 {
+            $wh : 65px;
+            .ico_wrap {
+                @include fixed-wh($wh);
+            }
+            p{
+                margin-left: -30px;
             }
         }
     }
@@ -907,12 +1262,40 @@
         }
     }
 }
+@media (max-width:810px) {
+    body{
+        main{
+            &#main_page{
+                .ms{
+                    &.ms_07 {
+                        article {
+                            .s_title {
+                                flex-direction: column;
+                                h2{
+                                    display: flex;
+                                }
+                                .se_07_02{
+                                    padding-left: 0%;
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width:767px){
+    @mixin fs-117{font-size: 65px;}
     @mixin fs-75{font-size: 35px;}
     @mixin fs-48{font-size: 26px;}
+    @mixin fs-47{font-size: 24px;}
     @mixin fs-40{font-size: 22px;}
+    @mixin fs-35{font-size: 20px;}
     @mixin fs-30{font-size: 18px;}
     @mixin fs-28{font-size: 16px;}
+    @mixin fs-24{font-size: 15px;}
     @mixin fs-20{font-size: 14px;}
     html{
         font-size: 4px;
@@ -920,10 +1303,189 @@
     .ico_mouse{
         display: none !important;
     }
+    body{
+        main{
+            &#main_page{
+                @mixin mainContentMargin_01{
+                    margin-top: 100px;
+                }
+                .ms{
+                    .s_title{
+                        h2{
+                            @include fs-117;
+                        }
+                        h3{
+                            @include fs-24;
+                        }
+                    }
+                    .text_02{
+                        @include fs-35;
+                    }
+                    .text_03{
+                        @include fs-24;
+                    }
+                    &.ms_01{
+                        article{
+                            .wrap{
+                                figure{
+                                    figcaption{
+                                        .creative_ad_change{
+                                            .hello_jj_wrap{
+                                                min-width: 700px;
+                                                min-height: 700px;
+                                            }
+                                        }
+                                        
+                                        .info{
+                                            margin-top: 80px;
+                                        }
+                                        .btn_01{
+                                            margin-top: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.ms_02 {
+                        margin-top: 100px;
+                        article {
+                            .s_title {
+                                h2 {
+                                    p {
+                                        &:nth-child(2){
+                                            padding-left: 80px;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    @include el-layout-flex(0px, 80px, 2);
+    
+                                    dl {
+                                        dt {
+                                            h2 {
+                                                @include fs-40;
+                                                margin-top: 10px;
+                                            }
+                                        }
+    
+                                        dd {
+                                            margin-top: 5px;
+                                            p {
+                                                @include fs-20;
+                                            }
+                                        }
+                                    }
+    
+                                }
+                            }
+                        }
+                    }
+
+                    &.ms_04 {
+                        .hello_jj_wrap {
+                            $wh: 1000px;
+                            @include position-absolute(left, calc($wh / -2), top, 50%);
+                            @include fixed-wh($wh);
+                        }
+    
+                        article {
+                            .s_title {
+                                h2{
+                                    .se_04_02{
+                                        padding-left: 110px;
+                                    }
+                                }
+                                h3 {
+                                    margin-top: 50px;
+                                }
+                            }
+    
+                            .content {
+                                @include mainContentMargin_01;
+                                figure {
+                                    gap: 50px;
+                                    flex-direction: column;
+                                    max-width: 500px;
+                                    width: 100%;
+                                    .img_wrap{
+                                        width: 100%;
+                                        padding: 0 5%;
+                                        img{
+                                            width: 100%;
+                                            object-fit: contain;
+                                        }
+                                    }
+                                    figcaption {
+                                        width: 100%;
+                                        gap: 30px;
+                                        @include fs-24;
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+                    &.ms_05 {
+                        article {
+                            .s_title {
+                                gap: 20px;
+                                .se_05_02{
+                                    padding-left: 55px;
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(10px, 20px, 4);
+                                        li{
+                                            a{
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                    &.ms_06 {
+                        article {
+                            .s_title {
+                                gap: 20px;
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(10px, 10px, 3);
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+        .btn_01 {
+            $wh : 60px;
+            .ico_wrap {
+                @include fixed-wh($wh);
+            }
+        }
+    }
     main{
         #sub{
             .main01{
-                padding: 100px 0 60px;
+                padding: 150px 0 60px;
             }  
             &.portfolio_youonejae{
                 .main{
@@ -1371,6 +1933,74 @@
     html{
         font-size: 3.5px;
     }
+    body{
+        main{
+            &#main_page{
+                .ms{
+                    &.ms_01{
+                        article{
+                            .wrap{
+                                figure{
+                                    figcaption{
+                                        .text_02{
+                                            br{
+                                                display: none;
+                                            }
+                                        }
+                                        .text_03{
+                                            br{
+                                                display: none;
+                                            }
+                                        }
+                                        .creative_ad_change{
+                                            .hello_jj_wrap{
+                                                min-width: 600px;
+                                                min-height: 600px;
+                                            }
+                                            .ad{
+                                                .text_01{
+                                                    max-width: 280px;
+                                                    width: 100%;
+                                                }
+                                                .text_02{
+                                                    position: absolute;
+                                                    bottom: -70px;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                        .info{
+                                            margin-top: 100px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.ms_05{
+                        article{
+                            .s_title{
+                                gap: 40px;
+                                flex-direction: column;
+                                h2{
+                                    width: 100%;
+                                }
+                                h3{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_01 {
+            $wh : 65px;
+            .ico_wrap {
+                @include fixed-wh($wh);
+            }
+        }
+    }
     main{
         #sub{
             &.portfolio_youonejae{
@@ -1446,18 +2076,207 @@
     }
 }
 @media (max-width:450px){
+    @mixin fs-117{font-size: 50px;}
     @mixin fs-75{font-size: 30px;}
     @mixin fs-48{font-size: 24px;}
+    @mixin fs-47{font-size: 22px;}
     @mixin fs-40{font-size: 20px;}
+    @mixin fs-35{font-size: 18px;}
     @mixin fs-30{font-size: 16px;}
     @mixin fs-28{font-size: 14px;}
+    @mixin fs-24{font-size: 14px;}
+    @mixin fs-20{font-size: 12px;}
     html{
         font-size: 3px;
+    }
+    body{
+        main{
+            &#main_page{
+                @mixin mainContentMargin_01{
+                    margin-top: 70px;
+                }
+                .ms{
+                    &:not(.ms_01) {
+                        margin-top: 130px;
+                    }
+                    .s_title{
+                        h2{
+                            @include fs-117;
+                        }
+                        h3{
+                            @include fs-24;
+                        }
+                    }
+                    .text_02{
+                        @include fs-35;
+                    }
+                    .text_03{
+                        @include fs-24;
+                    }
+                    &.ms_01{
+                        article{
+                            .wrap{
+                                padding-top: 130px;
+                                figure{
+                                    figcaption{
+                                        .creative_ad_change{
+                                            .hello_jj_wrap{
+                                                min-width: 450px;
+                                                min-height: 450px;
+                                            }
+                                            .ad{
+                                                .text_01{
+                                                    max-width: 250px;
+                                                }
+                                                .text_02{
+                                                    bottom: -60px;
+                                                    .block{
+                                                        display: none !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+                                        .info{
+                                            margin-top: 90px;
+                                        }
+                                        .btn_01{
+                                            margin-top: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.ms_02 {
+                        margin-top: 70px;
+                        article {
+                            .s_title {
+                                h2 {
+                                    p {
+                                        &:nth-child(2){
+                                            padding-left: 60px;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    @include el-layout-flex(0px, 60px, 2);
+    
+                                    dl {
+                                        dt {
+                                            img{
+                                                width: 35px;
+                                                object-fit: contain
+                                            }
+                                            h2 {
+                                                @include fs-40;
+                                                margin-top: 8px;
+                                            }
+                                        }
+    
+                                        dd {
+                                            margin-top: 3px;
+                                            p {
+                                                @include fs-20;
+                                            }
+                                        }
+                                    }
+    
+                                }
+                            }
+                        }
+                    }
+
+                    &.ms_04 {
+                        .hello_jj_wrap {
+                            $wh: 900px;
+                            @include position-absolute(left, calc($wh / -2), top, 50%);
+                            @include fixed-wh($wh);
+                        }
+    
+                        article {
+                            .s_title {
+                                h2{
+                                    .se_04_02{
+                                        padding-left: 80px;
+                                    }
+                                }
+                                h3 {
+                                    margin-top: 30px;
+                                }
+                            }
+    
+                            .content {
+                                @include mainContentMargin_01;
+                                figure {
+                                    gap: 40px;
+                                    figcaption {
+                                        gap: 20px;
+                                        @include fs-24;
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+                    &.ms_05 {
+                        article {
+                            .s_title {
+                                gap: 30px;
+                                .se_05_02{
+                                    padding-left: 55px;
+                                }
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(10px, 20px, 3);
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                    &.ms_06 {
+                        article {
+                            .s_title {
+                                gap: 20px;
+                                flex-direction: column;
+                                align-items: start;
+                            }
+    
+                            .wrap {
+                                .content {
+                                    @include mainContentMargin_01;
+                                    >ul {
+                                        @include el-layout-flex(10px, 10px, 2);
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+        .btn_01 {
+            $wh : 55px;
+            .ico_wrap {
+                @include fixed-wh($wh);
+            }
+        }
     }
     main{
         #sub{
             .main01{
-                padding: 100px 0 40px;
+                padding: 130px 0 40px;
             }  
             &.portfolio_youonejae{
                 .main{
@@ -1855,6 +2674,30 @@
     }
 }
 @media (max-width:380px){
+    body{
+        main{
+            &#main_page{
+                .ms{
+                    &.ms_01{
+                        article{
+                            .wrap{
+                                figure{
+                                    figcaption{
+                                        .creative_ad_change{
+                                            .hello_jj_wrap{
+                                                min-width: 400px;
+                                                min-height: 400px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     main{
         #sub{
             &.estimate{
