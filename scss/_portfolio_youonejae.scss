@@ -124,6 +124,7 @@ main{
                 }
             }
             .detail{
+                width: 100%;
                 padding: 230px 0;
                 .inner{
                     .text-box{
@@ -189,6 +190,9 @@ main{
                             width: 100%;
                             aspect-ratio: 16/9;
                             object-fit: cover;
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
                         }
                     }
                     .sticky-wrap{
@@ -284,7 +288,8 @@ main{
                             display: flex;
                             flex-direction: column;
                             ul{
-                                width: 530px;
+                                max-width: 530px;
+                                width: 100%;
                                 display: flex;
                                 align-items: flex-start;
                                 justify-content: flex-start;
@@ -313,6 +318,10 @@ main{
                             }
                         }
                     }
+                }
+                &.overflowx-hidden{
+                    overflow-x: hidden;
+                    overflow-y: hidden;
                 }
             }
             .full{

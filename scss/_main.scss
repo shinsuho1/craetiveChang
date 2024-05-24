@@ -1,7 +1,6 @@
 body {
     color: #fff;
     background-color: #000;
-
     main {
         position: relative;
         z-index: 2;
@@ -78,11 +77,11 @@ body {
 
                                         .hello_jj_wrap {
                                             @include position-absolute-center;
-                                            $wh: 62.5vw;
+                                            $wh: 100vw;
                                             width: $wh;
                                             height: $wh;
-                                            max-width: $wh;
-                                            max-height: $wh;
+                                            max-width: 1600px;
+                                            max-height: 1600px;
                                             min-width: 1400px;
                                             min-height: 1400px;
                                         }
@@ -347,13 +346,14 @@ body {
                                             height: 100%;
                                             margin-left: auto;
                                             z-index: 2;
-
+                                            overflow: visible;
                                             >* {
                                                 @include position-absolute-center;
                                             }
 
                                             >img {
                                                 z-index: 10;
+                                                width: 50%;
                                                 max-width: 70%;
                                                 max-height: 70%;
 

@@ -14,34 +14,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // gsap_main();
 
     /* ms_01 */
-    se_master(document.querySelector('.ms_01 .creative .text_01'), "lt", '', '', '', '0% 10%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .ad .text_01'), "l", '', '', '', '0% 10%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .ad .text_02 '), "rb", '', '', '', '0% 20%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .change .text_01'), "lb", '', '', '', '0% 20%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .ico_mouse'), "rt", '', '', '', '0% 40%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .info .text_03'), "rb", '', '', '', '0% 20%', '-40% -40%')
-    se_master(document.querySelector('.ms_01 .btn_01'), "l", '', '', '', '0% 40%', '-40% -40%')
+    se_master(document.querySelector('.ms_01 .creative .text_01'), "lt", '', '', '', '0% 10%', '-40% -40%');
+    se_master(document.querySelector('.ms_01 .ad .text_01'), "l", '', '', '', '0% 10%', '-40% -40%');
+    se_master(document.querySelector('.ms_01 .ad .text_02 '), "rb", '', '', '', '0% 20%', '-40% -40%');
+    se_master(document.querySelector('.ms_01 .change .text_01'), "lb", '', '', '', '0% 20%', '-40% -40%');
+    se_master(document.querySelector('.ms_01 .ico_mouse'), "rt", '', '', '', '0% 40%', '-40% -40%');
+    se_master(document.querySelector('.ms_01 .info .text_03'), "rb", '', '', '', '0% 20%', '-40% -40%');
+    se_master(document.querySelector('.ms_01 .btn_01'), "l", '', '', '', '0% 40%', '-40% -40%');
 
+    se_master(document.querySelector('.ms_05 .content'), "t", document.querySelector('.ms_05'));
 
-    se_master(document.querySelector('.ms_05 .content'), "t", document.querySelector('.ms_05'))
+    // se_master(document.querySelector('.portfolio .scroll-section .move04'),'lt');
 
     /* estimate */
-    se_master(document.querySelector('#sub.estimate .main01 .move01'), "r", '', '100', '', '0% 10%', '-40% -40%')
-    se_master(document.querySelector('#sub.estimate .main01 .move02'), "l", '', '100', '', '0% 20%', '-40% -40%')
-    se_master(document.querySelector('#sub.estimate .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%')
+    se_master(document.querySelector('#sub.estimate .main01 .move01'), "r", '', '100', '', '0% 10%', '-40% -40%');
+    se_master(document.querySelector('#sub.estimate .main01 .move02'), "l", '', '100', '', '0% 20%', '-40% -40%');
+    se_master(document.querySelector('#sub.estimate .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
 
     /* recruitment */
-    se_master(document.querySelector('#sub.recruitment .main01 .move01'), "r", '', '100', '', '0% 5%', '-40% -40%')
-    se_master(document.querySelector('#sub.recruitment .main01 .move02'), "l", '', '100', '', '0% 10%', '-40% -40%')
-    se_master(document.querySelector('#sub.recruitment .main01 .ico_mouse'), "rt", '', '', '', '0% 50%', '-20% -20%')
+    se_master(document.querySelector('#sub.recruitment .main01 .move01'), "r", '', '100', '', '0% 10%', '-40% -40%');
+    se_master(document.querySelector('#sub.recruitment .main01 .move02'), "l", '', '100', '', '0% 10%', '-40% -40%');
+    se_master(document.querySelector('#sub.recruitment .main01 .ico_mouse'), "rt", '', '', '', '0% 50%', '-20% -20%');
 
     /* overview */
-    se_master(document.querySelector('#sub.overview .main01 .move01'), "r", '', '100', '', '0% 10%', '-40% -40%')
-    se_master(document.querySelector('#sub.overview .main01 .move02'), "r", '', '100', '', '0% 10%', '-40% -40%')
-    se_master(document.querySelector('#sub.overview .main01 .move03'), "l", '', '100', '', '100% 40%', '-40% -40%')
-    se_master(document.querySelector('#sub.overview .main01 .move04'), "lt", '', '100', '', '0% 40%', '-40% -40%')
-    se_master(document.querySelector('#sub.overview .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%')
-
+    se_master(document.querySelector('#sub.overview .main01 .move01'), "r", '', '100', '', '0% 10%', '-40% -40%');
+    se_master(document.querySelector('#sub.overview .main01 .move03'), "l", '', '100', '', '0% 20%', '-40% -40%');
+    se_master(document.querySelector('#sub.overview .main01 .move04'), "lt", '', '100', '', '0% 40%', '-40% -40%');
+    se_master(document.querySelector('#sub.overview .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
 
     document.querySelectorAll('.jj_ani_return').forEach(function (el) {
         se_master(el, "return");
