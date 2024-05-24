@@ -62,30 +62,38 @@ main {
             }
 
             .main01-bg01 {
-                $wh: 62.5vw;
+                $wh: 100vw;
                 width: $wh;
                 height: $wh;
                 min-width: 600px;
                 min-height: 600px;
-                top: calc($wh / -1.7);
+                max-width: 1600px;
+                max-height: 1600px;
+                top: calc(1600px / -1.7);
                 right: 0;
             }
             .main01-bg02{
-                $wh: 39.1vw;
+                $wh: 100vw;
+                top: 0;
                 width: $wh;
                 height: $wh;
-                left: calc($wh / -1.5);
+                left: -1200px;
+                max-width: 1000px;
+                max-height: 1000px;
             }
             .service-info-bg{
-                $wh: 39.1vw;
+                $wh: 100vw;
                 width: $wh;
                 height: $wh;
-                right: calc($wh / -1.2);
+                right: calc(1000px / -1.2);
                 min-width: 500px;
                 min-height: 500px;
+                max-width: 1000px;
+                max-height: 1000px;
                 top: 0;
             }
             .main01 {
+                position: relative;
                 .title01 {
                     @include fs-220;
                     font-weight: 900;

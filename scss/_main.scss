@@ -547,7 +547,9 @@ body {
                                 li {
                                     @include fs-24;
                                     line-height: 1;
-
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
                                     &.font-47 {
                                         @include fs-47;
                                         font-weight: 900;

@@ -1,3 +1,20 @@
+@media (max-width:1920px){
+    main{
+        #sub{
+            &.recruitment{
+                .inner{
+                    .wrap{
+                        &.section02{
+                            .section02-bg{
+                                right: -30vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width:1750px){
     main{
         #sub{
@@ -518,6 +535,10 @@
                         &.section02{
                             ul{
                                 gap: 80px 0;
+                            }
+                            .section02-bg{
+                                max-width: 800px;
+                                max-height: 800px;
                             }
                         }
                         &.section03{
@@ -1263,6 +1284,12 @@
                                         margin-bottom: 10px;
                                     }
                                 }
+                            }
+                            .section02-bg{
+                                bottom: calc(700px / -2);
+                                max-width: 700px;
+                                max-height: 700px;
+                                right: -40vw;
                             }
                         }
                         &.section03{
@@ -2106,6 +2133,12 @@
                                     }
                                 }
                             }
+                            .section02-bg{
+                                bottom: calc(500px / -2);
+                                max-width: 500px;
+                                max-height: 500px;
+                                right: -45vw;
+                            }
                         }
                         &.section03{
                             h2{
@@ -2707,7 +2740,7 @@
     main{
         #sub{
             .main01{
-                padding: 130px 0 40px;
+                padding: 130px 0 80px;
             }  
             &.portfolio_youonejae{
                 .main{
@@ -3034,25 +3067,31 @@
                         .title01{
                             width: 100%;
                             .top{
-                                flex-direction: column-reverse;
                                 gap: 10px;
                                 width: 100%;
-                                padding-left: 5%;
+                                padding-left: 0;
                                 span{
-                                    padding-left: 5%;
+                                    padding-left: 0%;
                                     width: 100%;
                                 }
                             }
                             .text{
                                 width: 100%;
                                 @include fs-30;
+                                position: absolute;
+                                left: 0;
+                                bottom: -120px;
+                                width: 100%;
+                                br{
+                                    display: none;
+                                }
                             }
                             p{
                                 padding-left: 20%;
                             }
                         }
                         .img-wrap{
-                            margin-top: 30px;
+                            margin-top: 80px;
                             img{
                                 max-width: 180px;
                             }
@@ -3060,7 +3099,7 @@
                     }
                     .wrap{
                         &.section01{
-                            margin-bottom: 40px;
+                            margin-bottom: 100px;
                             h2{
                                 @include fs-75;
                             }
