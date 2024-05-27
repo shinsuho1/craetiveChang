@@ -28,7 +28,7 @@ $headerHeight: 130px;
             justify-content: flex-end;
             position: relative;
             
-                
+            
 
             .logo-box {
                 position: fixed;
@@ -442,7 +442,7 @@ $headerHeight: 130px;
     position: relative; z-index: 90;
 
     .inner {
-        max-width: 1400px;
+        max-width: 1440px;
         width: $innerWidth;
         margin: 0 auto;
         display: flex;
@@ -816,11 +816,13 @@ $headerHeight: 130px;
             flex-direction: column-reverse;
             align-items: flex-start;
             gap: 40px;
+            font-size: 14px;
             .left {
                 width: 100%;
                 gap: 15px;
                 padding-right: 0;
                 border-right: none;
+                font-size: 14px;
             }
 
             .right {
@@ -870,14 +872,14 @@ $headerHeight: 130px;
             .left{
                 ul{
                     li{
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 1px 10px;
-                        span{
-                            font-weight: 500;
-                        }
+                        // flex-direction: column;
+                        // align-items: flex-start;
+                        // gap: 1px 10px;
+                        // span{
+                        //     font-weight: 500;
+                        // }
                         sup{
-                            display: none;
+                            margin: 2px 5px 0 2px;
                         }
                     }
                 }

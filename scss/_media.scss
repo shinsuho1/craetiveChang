@@ -444,6 +444,21 @@
                 }
             }
             &.estimate{
+                .main01-bg01{
+                    min-width: 1400px;
+                    min-height: 1400px;
+                    max-width: 1400px;
+                    max-height: 1400px;
+                    top: calc(1400px / -1.5);
+                    right: calc(500px / -1.7);
+                }
+                .main01-bg02{
+                    max-width: 800px;
+                    max-height: 800px;
+                    min-width: 800px;
+                    max-height: 800px;
+                    left: -600px;
+                }
                 .main01{
                     .text{
                         margin-top: 120px;
@@ -479,7 +494,7 @@
                             p{
                                 font-size: 25px;
                             }
-                            img{
+                            .arrow{
                                 width: 125px;
                             }
                         }
@@ -1215,15 +1230,6 @@
                         }
                         .f_submit{
                             margin-top: 0;
-                            p{
-                                color: #Fff;
-                            }
-                            .circle{
-                                &.red{
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
                         }
                     }
                 }
@@ -2014,6 +2020,9 @@
                                        margin-right: 0;
                                         padding: 0 10px;
                                     }
+                                    .btn{
+                                        display: none;
+                                    }
                                 }
                             }
                             .text{
@@ -2058,10 +2067,18 @@
                         .f_submit{
                             width: 200px;
                             p{
+                                color: #Fff;
                                 font-size: 22px;
                             }
-                            img{
+                            .circle{
+                                &.red{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .arrow{
                                 width: 110px;
+                                background-image: url(../images/common/subscribe_arrow.png);
                             }
                         }
                     }
@@ -2330,7 +2347,7 @@
 }
 @media (max-width:540px){
     html{
-        font-size: 3.5px;
+        font-size: 3px;
     }
     body{
         main{
@@ -2358,7 +2375,7 @@
                                             }
                                             .ad{
                                                 .text_01{
-                                                    max-width: 280px;
+                                                    max-width: 240px;
                                                     width: 100%;
                                                 }
                                                 .text_02{
@@ -2486,7 +2503,7 @@
     @mixin fs-24{font-size: 14px;}
     @mixin fs-20{font-size: 12px;}
     html{
-        font-size: 3px;
+        font-size: 2.5px;
     }
     body{
         main{
@@ -2525,7 +2542,7 @@
                                             }
                                             .ad{
                                                 .text_01{
-                                                    max-width: 250px;
+                                                    max-width: 200px;
                                                 }
                                                 .text_02{
                                                     bottom: -60px;
@@ -2963,7 +2980,7 @@
                             p{
                                 font-size: 20px;
                             }
-                            img{
+                            .arrow{
                                 width: 100px;
                             }
                         }
@@ -3016,6 +3033,7 @@
                             ul{
                                 gap: 40px 0;
                                 li{
+                                    width: calc(100% / 2);
                                     .icon-wrap{
                                         width: 35px;
                                         height: 35px;

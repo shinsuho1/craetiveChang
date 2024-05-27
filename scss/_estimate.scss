@@ -61,8 +61,8 @@ main {
                 $wh: 100vw;
                 width: $wh;
                 height: $wh;
-                min-width: 600px;
-                min-height: 600px;
+                min-width: 1600px;
+                min-height: 1600px;
                 max-width: 1600px;
                 max-height: 1600px;
                 top: calc(1600px / -1.7);
@@ -73,7 +73,7 @@ main {
                 top: 0;
                 width: $wh;
                 height: $wh;
-                left: -1200px;
+                left: -40vw;
                 max-width: 1000px;
                 max-height: 1000px;
             }
@@ -121,7 +121,7 @@ main {
                     animation: fade-on 1s .9s forwards;
                 }
             }
-            form{position: relative; width: 100%;overflow-x: hidden;}
+            form{position: relative;}
             .wrap {
                 width: 100%;
                 margin-bottom: 150px;
@@ -265,7 +265,8 @@ main {
                                     overflow-x: hidden;
                                     overflow-y: auto;
                                     transition: .3s;
-
+                                    resize: none;
+                                    outline: none;
                                     &::placeholder {
                                         color: rgba(255, 255, 255, 0.32);
                                         font-size: 16px;
@@ -477,12 +478,17 @@ main {
                             align-items: center;
                             gap: 15px;
                             line-height: 1;
-
+                            label{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                            }
                             p {
                                 color: #fff;
                                 height: 28px;
                                 line-height: 26px;
                                 font-size: 18px;
+                                margin-left: 10px;
                             }
 
                             a {
@@ -530,10 +536,15 @@ main {
                             color: #000;
                             transition: .3s;
                         }
-
-                        img {
+                        .arrow{
                             position: relative;
                             z-index: 5;
+                            width: 146px;
+                            aspect-ratio: 73/14;
+                            background-image: url(../images/common/subscribe_arrow_black.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
                         }
 
                         .circle {
@@ -563,6 +574,9 @@ main {
                         &:hover {
                             p {
                                 color: #fff;
+                            }
+                            .arrow{
+                                background-image: url(../images/common/subscribe_arrow.png);
                             }
 
                             .circle {

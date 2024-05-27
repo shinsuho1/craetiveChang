@@ -3,6 +3,7 @@ main {
         .circle-bg{
             @include draggable_off;
             position: absolute;
+            z-index: -1;
             *{
                 @include draggable_off;
             }
@@ -41,6 +42,7 @@ main {
                             line-height: 1;
                             position: relative;
                             opacity: 0;
+                            white-space: nowrap;
                         }
 
                         .top {
