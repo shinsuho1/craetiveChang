@@ -679,6 +679,16 @@
                     }
                 }
             }
+            &.privacy{
+                .inner{
+                    .main01{
+                        .title01{
+                            @include fs-47;
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -1459,6 +1469,19 @@
                         bottom: calc($wh / -2.5);
                         left: 50%;
                         transform: translateX(-50%);
+                    }
+                }
+            }
+            &.privacy{
+                .inner{
+                    .main01{
+                        .title01{
+                            @include fs-47;
+                            margin-bottom: 40px;
+                        }
+                        .info{
+                            padding: 20px;
+                        }
                     }
                 }
             }
@@ -2288,6 +2311,19 @@
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+            &.privacy{
+                .inner{
+                    .main01{
+                        .title01{
+                            @include fs-47;
+                            margin-bottom: 20px;
+                        }
+                        .info{
+                            padding: 15px;
                         }
                     }
                 }
@@ -3158,6 +3194,18 @@
                         min-width: 400px;
                         min-height: 400px;
                         bottom: calc($wh / -2.5);
+                    }
+                }
+            }
+            &.privacy{
+                .inner{
+                    .main01{
+                        .title01{
+                            @include fs-47;
+                        }
+                        .info{
+                            padding: 10px;
+                        }
                     }
                 }
             }

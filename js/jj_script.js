@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     se_master(document.querySelector('#sub.recruitment .main01 .ico_mouse'), "rt", '', '', '', '0% 50%', '-20% -20%');
 
     /* overview */
-    se_master(document.querySelector('#sub.overview .main01 .move01'), "r", '', '100', '', '0% 10%', '-40% -40%');
-    se_master(document.querySelector('#sub.overview .main01 .move03'), "l", '', '100', '', '0% 20%', '-40% -40%');
+    se_master(document.querySelector('#sub.overview .main01 .move01'), "rt", '', '100', '', '0% 10%', '-40% -40%');
+    se_master(document.querySelector('#sub.overview .main01 .move03'), "lb", '', '100', '', '0% 20%', '-40% -40%');
     se_master(document.querySelector('#sub.overview .main01 .move04'), "lt", '', '100', '', '0% 40%', '-40% -40%');
     se_master(document.querySelector('#sub.overview .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
 
