@@ -4,15 +4,14 @@
 // @import "./ckeditor.css";
 @import "function"; 
 
+@import "keyframe";
 
 @import "gnb";  /* gnb css */
 
 @import "main"; /* main css */
 
-
 /* about */
 @import "overview"; /* overview */
-
 
 /* portfolio */
 @import "portfolio_youonejae"; /* portfolio youonejae css */
@@ -20,54 +19,8 @@
 @import "estimate"; /* estimate */
 @import "recruitment"; /* recruitment */
 
-
 @import "move_event"; /* event transform */ 
 
 @import "./media";
 
 
-@keyframes pos-fade-left{
-    0%{
-        left: -50px;        
-        opacity: 0;
-    }
-    100%{
-        left: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes pos-fade-right{
-    0%{
-        left: 50px;
-        opacity: 0;
-    }
-    100%{
-        left: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes fade-on{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyframes mouse_wheel {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
-}
