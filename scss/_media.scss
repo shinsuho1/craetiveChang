@@ -1146,7 +1146,7 @@
                 }
                 .main01{
                     position: relative;
-                    padding-bottom: 0;
+                    // padding-bottom: 0;
                     .text{
                         margin-top: 100px;
                         @include fs-30;
@@ -1547,6 +1547,7 @@
                     &.ms_01{
                         article{
                             .wrap{
+                                padding-top: 100px;
                                 figure{
                                     figcaption{
                                         .creative_ad_change{
@@ -1816,7 +1817,7 @@
     main{
         #sub{
             .main01{
-                padding: 150px 0 60px;
+                padding: 100px 0 60px;
             }  
             &.portfolio_youonejae{
                 .main{
@@ -2497,7 +2498,7 @@
                     &.ms_01{
                         article{
                             .wrap{
-                                padding-top: 130px;
+                                padding-top: 90px;
                                 figure{
                                     figcaption{
                                         .creative_ad_change{
@@ -2740,7 +2741,7 @@
     main{
         #sub{
             .main01{
-                padding: 130px 0 80px;
+                padding: 90px 0 80px;
             }  
             &.portfolio_youonejae{
                 .main{

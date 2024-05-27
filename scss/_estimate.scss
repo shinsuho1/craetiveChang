@@ -70,7 +70,7 @@ main {
                 max-width: 1600px;
                 max-height: 1600px;
                 top: calc(1600px / -1.7);
-                right: 0;
+                right: calc(1600px / -2);
             }
             .main01-bg02{
                 $wh: 100vw;

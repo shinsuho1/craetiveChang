@@ -51,13 +51,13 @@ $siteSEO = [
 
 
 <?
-#header("HTTP/1.1 301 Moved Permanently");
-#header("Location: ./contact/");
+header("HTTP/1.1 301 Moved Permanently");
+header("Location: ./main/index.html");
 #exit;
-if (preg_match('/ko/', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-    header("Location: /kor/");
-} else {
-    header("Location: /eng/");
-}
-exit;
+// if (preg_match('/ko/', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+//     header("Location: /kor/");
+// } else {
+//     header("Location: /eng/");
+// }
+// exit;
 ?>

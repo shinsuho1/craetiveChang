@@ -65,6 +65,27 @@
             .move06{transform: translate(0,-50px);}
         }
     }
+    &.estimate{
+        .wrap{
+            &.schedule-info{
+                .f_submit{transform: translate(-50px,-50px);}
+            }
+        }
+    }
+    &.recruitment{
+        .wrap{
+            &.section01{
+                .move01{transform: translate(-50px,0);}
+            }
+            &.section02{
+                .move01{transform: translate(50px,0);}
+            }
+            &.section03{
+                .move01 {transform: translate(-50px, 0);}
+                .move02{transform: translate(50px,0);}
+            }
+        }
+    }
 }
 
 
