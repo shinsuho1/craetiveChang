@@ -177,7 +177,6 @@
                         article {
                             .wrap {
                                 .content {
-                                    // padding: 0 4%;
                                     @include mainContentMargin_01;
                                     position: relative;
                                     .swiper-option {
@@ -415,18 +414,12 @@
                         }
                         .sticky-wrap{
                             gap: 50px;
-                            // justify-content: space-between;
                             ul{
                                 width: 600px;
                             }
                         }
                         .scroll-section{
                             padding: 150px 0;
-                            .text-box{
-                                // br{
-                                //     display: none;
-                                // }
-                            }
                         }
                         .aa-wrap{
                             margin-bottom: 200px;
@@ -451,7 +444,6 @@
                 }
             }
             &.estimate{
-                // padding-top: ;
                 .main01{
                     .text{
                         margin-top: 120px;
@@ -879,11 +871,6 @@
                         }
                     }
                     &.ms_04 {
-                        .hello_jj_wrap {
-                            // $wh: 900px;
-                            // @include position-absolute(left, calc($wh / -2), top, 50%);
-                            // @include fixed-wh($wh);
-                        }
     
                         article {
                             .s_title {
@@ -1146,7 +1133,6 @@
                 }
                 .main01{
                     position: relative;
-                    // padding-bottom: 0;
                     .text{
                         margin-top: 100px;
                         @include fs-30;
@@ -1677,7 +1663,6 @@
                                                     aspect-ratio: 1/1;
                                                 }    
                                                 >img{
-                                                    // width: 100%;
                                                     object-fit: contain;
                                                     max-width: initial;
                                                     max-height: initial;
@@ -2433,7 +2418,6 @@
                             padding: 40px 0 100px;
                             ul{
                                 gap: 20px;
-                                // flex-direction: column;
                                 justify-content: center;
                                 li{
                                     width: calc(100% / 2 - 10px);

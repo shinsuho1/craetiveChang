@@ -238,8 +238,6 @@ body {
                                 }
 
                                 .swiper {
-
-                                    // border: 2px solid #f00;
                                     .swiper-wrapper {
                                         .swiper-slide {
                                             @include transition(all .3s);
@@ -255,8 +253,6 @@ body {
                                         width: 50%;
                                         margin-left: 0;
                                         padding: 130px 40px 130px 0;
-
-                                        // background-color: #000;
                                         .swiper-wrapper {
                                             align-items: center;
 
@@ -370,10 +366,6 @@ body {
                                                     }
                                                 }
                                             }
-                                        }
-
-                                        canvas {
-                                            // @include fullsize;
                                         }
                                     }
                                 }

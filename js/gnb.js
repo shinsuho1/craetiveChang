@@ -57,18 +57,6 @@ gnb.forEach((el, index) => {
             ${el.querySelector("a.normal").textContent}
         </a>`;
 });
-// function for_remove_link(element){
-//     document.querySelectorAll(element).forEach((el, index) => {
-//         el.addEventListener("click", (e) => {
-//             if (!gnb[index].querySelector(".sub-menu")) {
-//                 e.parentElement();
-//                 gnb[index].classList.add("active");
-//             }
-//         });
-//     });
-// }
-// for_remove_link("header .gnb a.normal");
-// for_remove_link("header .gnb a.motion");
 
 document.querySelectorAll("header .gnb a.normal").forEach((el, index) => {
     el.addEventListener("click", (e) => {
