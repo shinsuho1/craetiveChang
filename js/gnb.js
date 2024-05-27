@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 window.addEventListener("resize", () => {
-    setPath(0);
+    // setPath(0);
 });
 document.querySelector("header .menuicon").addEventListener("click", () => {
     side.classList.add("active");

@@ -217,6 +217,7 @@ $headerHeight: 130px;
         background-color: #000;
         transition: .8s;
         opacity: 0;
+        overflow-y: auto;
         .inner {
             width: $innerWidth;
             height: 100%;
@@ -224,8 +225,11 @@ $headerHeight: 130px;
             font-family: "Noto Sans", sans-serif;
             z-index: 9;
             position: relative;
-            
-   
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .top{width: 100%;}
             .head {
                 width: 100%;
                 display: flex;
@@ -348,12 +352,11 @@ $headerHeight: 130px;
             .copy {
                 font-size: 20px;
                 color: #e7e7e7;
-                position: absolute;
-                bottom: 10vh;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
+                padding-bottom: 50px;
                 .sns {
                     display: none;
                     align-items: center;
@@ -578,11 +581,11 @@ $headerHeight: 130px;
 
                 .center,
                 .copy {
-                    margin-left: calc(4% + 35px);
+                    margin-left: 0;
+                    padding-left: calc(4% + 35px);
                 }
 
                 .copy{
-                    width: 85.4%;
                     .sns{
                         display: flex;
                     }
@@ -632,6 +635,10 @@ $headerHeight: 130px;
                     }
                 }
 
+                .center,.copy{
+                    padding-left: 0;
+                }
+
                 .center {
                     .gnb {
                         width: initial;
@@ -674,11 +681,23 @@ $headerHeight: 130px;
 
                 .copy {
                     font-size: 18px;
-                    flex-direction: column;
-                    width: initial;
-                    align-items: flex-start;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    .box{
+                        width: 100%;
+                    }
                     .project-btn{
-                        display: none;
+                        .text{
+                            left: -110px;
+                            .arrow{
+                                margin-left: 10px;
+                            }
+                        }
+                        .box{
+                            width: 100px;
+                        }
                     }
                 }
             }
@@ -805,6 +824,7 @@ $headerHeight: 130px;
             }
 
             .right {
+                display: none;
                 margin-left: 100px;
             }
         }
@@ -821,8 +841,25 @@ $headerHeight: 130px;
                 }
 
                 .copy {
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
                     .mo-only {
                         display: none;
+                    }
+                    .project-btn{
+                        .text{
+                            left: -97px;
+                            .arrow{
+                                width: 30px;
+                                img{
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                        .box{
+                            width: 90px;
+                        }
                     }
                 }
             }
@@ -883,8 +920,15 @@ $headerHeight: 130px;
                 .center {
                     .gnb {
                         >li {
+                            margin-bottom: 5px;
+                            .a-box{
+                                a{
+                                    font-size: 32px;
+                                }
+                            }
                             .sub-menu {
                                 li {
+                                    margin: 5px 0;
                                     a {
                                         font-size: 20px;
                                     }
