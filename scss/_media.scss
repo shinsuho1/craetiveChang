@@ -1625,7 +1625,6 @@
                                         }
     
                                         dd {
-                                            margin-top: 5px;
                                             p {
                                                 @include fs-20;
                                             }
@@ -1721,7 +1720,7 @@
                     &.ms_04 {
                         .hello_jj_wrap {
                             $wh: 1000px;
-                            @include position-absolute(left, calc($wh / -2), top, 50%);
+                            @include position-absolute(left, calc($wh / -2), top, 40%);
                             @include fixed-wh($wh);
                         }
     
@@ -2671,8 +2670,8 @@
                                         &.swiper_jj {
                                             .img_wrap {
                                                 .hello_jj_wrap{
-                                                    min-width: 400px;
-                                                    min-height: 400px;
+                                                    min-width: 300px;
+                                                    min-height: 300px;
                                                 }    
                                             }    
                                         }
@@ -2684,7 +2683,7 @@
                     &.ms_04 {
                         .hello_jj_wrap {
                             $wh: 900px;
-                            @include position-absolute(left, calc($wh / -2), top, 50%);
+                            @include position-absolute(left, calc($wh / -2), top, 40%);
                             @include fixed-wh($wh);
                         }
     

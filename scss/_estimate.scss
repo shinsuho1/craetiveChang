@@ -60,7 +60,7 @@ main {
                 top: 0;
                 width: $wh;
                 height: $wh;
-                left: -40vw;
+                left: calc(1000px / -1.7);
                 max-width: 1000px;
                 max-height: 1000px;
             }
