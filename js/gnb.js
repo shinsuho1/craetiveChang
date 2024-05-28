@@ -10,9 +10,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
-
-
 $("header .side .gnb>li .a-box").on("click", function (e) {
     $(this).siblings(".sub-menu").stop().slideToggle();
     $(this).toggleClass("active");

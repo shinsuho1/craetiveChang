@@ -3,7 +3,7 @@ main {
         .circle-bg {
             @include draggable_off;
             position: absolute;
-            z-index: -1;
+            z-index: -2;
 
             * {
                 @include draggable_off;
@@ -131,6 +131,7 @@ main {
                     }
 
                     &.section02 {
+                        z-index: 3;
                         .title {
                             @include fs-120;
                             font-weight: 900;
@@ -218,7 +219,7 @@ main {
                         display: flex;
                         justify-content: flex-end;
                         position: relative;
-
+                        z-index: 1;
                         .section03-bg {
                             $wh: 100vw;
                             width: $wh;
