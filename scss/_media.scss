@@ -300,6 +300,11 @@
                     }
                     &.ms_06 {
                         article {
+                            .hello_jj_wrap{
+                                max-width: 800px;
+                                max-height: 800px;
+                                right: calc(800px / -2);
+                            }
                             .s_title {
                                 gap: 40px;
                             }
@@ -951,6 +956,13 @@
                     }
                     &.ms_06 {
                         article {
+                            .hello_jj_wrap{
+                                max-width: 600px;
+                                max-height: 600px;
+                                right: calc(600px / -2);
+                                top: -100px;
+                            }
+
                             .s_title {
                                 gap: 30px;
                             }
@@ -1777,6 +1789,11 @@
                     }
                     &.ms_06 {
                         article {
+                            .hello_jj_wrap{
+                                max-width: 500px;
+                                max-height: 500px;
+                                right: calc(500px / -2);
+                            }
                             .s_title {
                                 gap: 20px;
                             }
@@ -2718,6 +2735,11 @@
                     }
                     &.ms_06 {
                         article {
+                            .hello_jj_wrap{
+                                max-width: 400px;
+                                max-height: 400px;
+                                right: calc(400px / -2);
+                            }
                             .s_title {
                                 gap: 20px;
                                 flex-direction: column;

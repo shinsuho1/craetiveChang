@@ -38,15 +38,15 @@
         .se_06_02{transform: translate(50px,0);}
         ul {
             li {
-                &:nth-child(1n) {transform: translate(0,-100px);}
-                &:nth-child(2n) {transform: translate(0,-150px);}
-                &:nth-child(3n) {transform: translate(0,-200px);}
+                &:nth-child(1n) {transform: translate(0,-150px);}
+                &:nth-child(2n) {transform: translate(0,-100px);}
+                &:nth-child(3n) {transform: translate(0,-50px);}
             }
         }
     }
     .ms_07{
-        .se_07_01{transform: translate(50px);}
-        .se_07_02{transform: translate(-50px);}
+        .se_07_01{transform: translate(50px,0);}
+        .se_07_02{transform: translate(-50px,0);}
         .se_07_03{transform: translate(50px,-50px);}
     }
 }
@@ -101,6 +101,11 @@
                 }
             }
         }
+        .ms_07{
+            .se_07_01{transform: translate(0,0) !important;}
+            .se_07_02{transform: translate(0,0) !important;}
+            .se_07_03{transform: translate(0,0) !important;}
+        }
     }
 }
 
@@ -125,9 +130,9 @@
     }
 
     .wrap.section04{
-        .move01{transform: translate(0, -100px);}
-        .move02{transform: translate(0, -150px);}
-        .move03{transform: translate(0, -200px);}
+        .move01{transform: translate(0, -150px);}
+        .move02{transform: translate(0, -100px);}
+        .move03{transform: translate(0, -50px);}
     }
 }
 

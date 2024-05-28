@@ -209,6 +209,7 @@ body {
   input, button, textarea, select{
     &.add_board, &:focus-visible {
       // outline: 1px solid #ef7f00 !important;
+      outline: none;
     }
     &::placeholder {color: #cecece; font-weight: normal;}
     border: none; font-family: inherit;
