@@ -1,10 +1,12 @@
+
 body {
     color: #fff;
     background-color: #000;
     main {
         position: relative;
-        z-index: 2;
+        z-index: 10;
         &#main_page {
+            overflow: hidden;
             @mixin mainContentMargin_01 {
                 margin-top: 200px;
             }

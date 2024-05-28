@@ -378,6 +378,7 @@ body {
   }
   .hello_jj_wrap {
       @include draggable_off;
+      z-index: -1;
       * {
           @include draggable_off;
       }

@@ -1,10 +1,15 @@
+let menuicon = document.querySelector(".menuicon-box");
 window.addEventListener("scroll", () => {
+    if(window.innerWidth <= 1024){
+        return false;
+    }
     if (window.scrollY >= 300) {
-        document.querySelector(".menuicon-box").classList.add("active");
+        menuicon.classList.add("active");
     } else {
-        document.querySelector(".menuicon-box").classList.remove("active");
+        menuicon.classList.remove("active");
     }
 });
+
 
 
 
@@ -26,14 +31,26 @@ function setPath(num) {
     side.style.clipPath = `circle(${num}vw at ${(icon.getBoundingClientRect().x) + 20}px ${icon.getBoundingClientRect().y}px)`;
 }
 window.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth <= 1024){
+        menuicon.classList.add("active");
+    }
     setPath(0);
     side.style.opacity = "1";
     if (window.scrollY >= 300) {
-        document.querySelector(".menuicon-box").classList.add("active");
+        menuicon.classList.add("active");
     }
 });
 window.addEventListener("resize", () => {
     // setPath(0);
+    if(window.innerWidth <= 1024){
+        if(menuicon.classList.contains("active")) return false;
+        menuicon.classList.add("active");
+    }else{
+        if(window.scrollY <= 300){
+            if(!menuicon.classList.contains("active")){return false;}
+            menuicon.classList.remove("active");
+        }
+    }
 });
 document.querySelector("header .menuicon").addEventListener("click", () => {
     side.classList.add("active");
@@ -82,3 +99,4 @@ gnb.forEach(el => {
         if (el.classList.contains("active")) el.classList.remove("active");
     });
 });
+

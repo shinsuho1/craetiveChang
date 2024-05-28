@@ -1008,6 +1008,9 @@
         }
     }
     main{
+        &.portfolio{
+            overflow-x: hidden;
+        }
         #sub{
             .main01{
                 padding: 150px 0 80px;
@@ -2498,9 +2501,9 @@
     @mixin fs-40{font-size: 20px;}
     @mixin fs-35{font-size: 18px;}
     @mixin fs-32{font-size: 17px;}
-    @mixin fs-30{font-size: 16px;}
-    @mixin fs-28{font-size: 14px;}
-    @mixin fs-24{font-size: 14px;}
+    @mixin fs-30{font-size: 14px;}
+    @mixin fs-28{font-size: 13px;}
+    @mixin fs-24{font-size: 13px;}
     @mixin fs-20{font-size: 12px;}
     html{
         font-size: 2.5px;
@@ -2539,6 +2542,7 @@
                                             .hello_jj_wrap{
                                                 min-width: 450px;
                                                 min-height: 450px;
+                                                left: calc(50% + 20px);
                                             }
                                             .ad{
                                                 .text_01{
@@ -2779,13 +2783,21 @@
             }  
             &.portfolio_youonejae{
                 .main{
-                    .left{
-                        .type{
-                            font-size: 16px;
+                    .title{
+                        .left{
+                            .type{
+                                font-size: 14px;
+                            }
+                            .logo{
+                                width: 200px;
+                            }
                         }
                         .right{
                             li{
-                                font-size: 16px;
+                                font-size: 14px;
+                                span{
+                                    margin-right: 0;
+                                }
                             }
                         }
                     }
@@ -2825,12 +2837,11 @@
                         .scroll-section{
                             padding: 0 0 60px;
                             .top{
-                                gap: 20px;
+                                gap: 40px;
                             }
                             .scl-mot{
-                                flex-direction: column;
                                 li{
-                                    width: 100%;
+                                    width: calc(100% / 2 - 10px);
                                     border-radius: 10px;
                                 }
                             }
@@ -2992,6 +3003,8 @@
                     .main01-bg{
                         min-width: 450px;
                         min-height: 450px;
+                        top: calc(50% + 10px);
+                        left: calc(50% + 20px);
                     }
                     .main01{
                         padding-bottom: 40px;
@@ -3096,6 +3109,7 @@
             &.overview{
                 .inner{
                     .main01-bg{
+                        top: calc(50% - 45px);
                         min-width: 450px;
                         min-height: 450px;
                     }
@@ -3103,9 +3117,8 @@
                         .title01{
                             width: 100%;
                             .top{
-                                gap: 10px;
-                                width: 100%;
-                                padding-left: 0;
+                                padding-right: 30%;
+                                padding-left: 0%;
                                 span{
                                     padding-left: 0%;
                                     width: 100%;
@@ -3115,16 +3128,16 @@
                                 width: 100%;
                                 @include fs-30;
                                 position: absolute;
-                                left: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
                                 bottom: -120px;
-                                width: 100%;
                                 br{
                                     display: none;
                                 }
                             }
-                            p{
-                                padding-left: 20%;
-                            }
+                        }
+                        p{
+                            padding-left: 20%;
                         }
                         .img-wrap{
                             margin-top: 80px;

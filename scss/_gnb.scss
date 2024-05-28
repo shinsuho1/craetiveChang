@@ -300,7 +300,6 @@ $headerHeight: 130px;
                             }
 
                             .motion {
-                                transform: color .15s;
                                 color: #df1f26;
                                 position: absolute;
                                 left: 0;
@@ -429,17 +428,21 @@ $headerHeight: 130px;
 
 .gnb_footer {
     .fot_br{display: none;}
-    overflow: hidden;
+    background-color: transparent;
+    position: relative;
     .hello_jj_wrap{
-        $wh : 1600px;
-        position: absolute; left: 50%; transform: translateX(-50%); bottom: calc($wh / -1.5); 
+        $wh : 100vw;
+        max-width: 1600px;
+        max-height: 1600px;
+        position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(1600px / -1.5); 
         width:$wh; height:$wh;
+        z-index: -2;
     }
     &.marginTop {margin-top: 100px;}
     width: 100%;
     font-family: 'Noto Sans KR', sans-serif;
     padding: 100px 0;
-    position: relative; z-index: 90;
+    position: relative; z-index: 3;
 
     .inner {
         max-width: 1440px;
@@ -449,7 +452,8 @@ $headerHeight: 130px;
         justify-content: space-between;
         align-items: center;
         font-size: 16px;
-
+        position: relative;
+        z-index: 1;
         .left {
             color: #Fff;
             display: flex;
@@ -514,6 +518,30 @@ $headerHeight: 130px;
         }
     }
 
+    .overview-bg{
+        position: absolute;
+        z-index: -1;
+        $wh : 100vw;
+        width:  $wh;
+        height:  $wh;
+        max-width: 900px;
+        max-height: 900px;
+        min-width: 700px;
+        min-height: 700px;
+        top: calc(900px / -1.4);
+        left: 40%;
+        transform: translateX(-50%);
+        .hellojj{
+            @include fullsize;
+            img{
+                @include fullsize;
+                object-fit: cover;
+            }
+        }
+    }
+    &.main_footer{
+        overflow: hidden;
+    }
 }
 
 @media (max-width:1440px) {
@@ -652,7 +680,7 @@ $headerHeight: 130px;
                                 }
 
                                 .motion {
-                                    bottom: -52px;
+                                    bottom: -100%;
                                 }
 
                                 .arrow {
@@ -727,6 +755,17 @@ $headerHeight: 130px;
                 }
             }
         }
+        .overview-bg{
+            $wh : 600px;
+            width:  $wh;
+            height:  $wh;
+            max-height:  $wh;
+            max-width:  $wh;
+            min-width: 600px;
+            min-height: 600px;
+            top: calc($wh / -1.7);
+            left: 50%;
+        }
     }
 }
 
@@ -771,7 +810,7 @@ $headerHeight: 130px;
                                 }
 
                                 .motion {
-                                    bottom: -36px;
+                                    bottom: -100%;
                                 }
 
                                 .arrow {
@@ -817,6 +856,9 @@ $headerHeight: 130px;
             align-items: flex-start;
             gap: 40px;
             font-size: 14px;
+            .logo{
+                font-size: 16px;
+            }
             .left {
                 width: 100%;
                 gap: 15px;
@@ -884,7 +926,16 @@ $headerHeight: 130px;
                     }
                 }
             }
-        }        
+        }       
+        .overview-bg{
+            $wh : 500px;
+            width:  $wh;
+            height:  $wh;
+            max-height:  $wh;
+            max-width:  $wh;
+            min-width: 500px;
+            min-height: 500px;
+        } 
     }
 }
 
@@ -958,8 +1009,21 @@ $headerHeight: 130px;
     .gnb_footer {
         padding: 20px 0 60px;
         .inner {
-            font-size: 14px;
+            font-size: 12px;
             gap: 20px;
+            .left{
+                font-size: 12px;
+            }
+        }
+        .overview-bg{
+            $wh : 400px;
+            width:  $wh;
+            height:  $wh;
+            max-height:  $wh;
+            max-width:  $wh;
+            min-width: 400px;
+            min-height: 400px;
+            top: calc($wh / -2);
         }
     }
 }

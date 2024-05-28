@@ -177,7 +177,7 @@
                                 </div>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#none">브랜딩</a>
+                                        <a href="../portfolio/detail.html">브랜딩</a>
                                     </li>
                                     <li>
                                         <a href="#none">인쇄제작물</a>
@@ -442,47 +442,29 @@
 </html>
 
 <script>
+    let html = document.querySelector("html");
+    function stopScroll(e){
+        e.preventDefault();
+        e.stopPropagation();
+    }
     window.addEventListener("DOMContentLoaded", () => {
-        let body = document.querySelector("body");
-        document.querySelector("html").classList.add("stop_scroll");
+        document.querySelector("body").classList.add("stop_scroll");
+        html.addEventListener("scroll",stopScroll,{passive: false});
+        html.addEventListener("wheel",stopScroll,{passive: false});
+        html.addEventListener("touchmove",stopScroll,{passive: false});
+        html.addEventListener("mousewheel",stopScroll,{passive: false});
         setTimeout(() => {
-            // window.scrollTo({
-            //     top: 0
-            // });
+            window.scrollTo({
+                top: 0
+            });
             document.querySelector("#sub .main").classList.add("load");
             setTimeout(() => {
-                document.querySelector("html").classList.remove("stop_scroll");
+                document.querySelector("body").classList.remove("stop_scroll");
+                html.removeEventListener("scroll",stopScroll,{passive: false});
+                html.removeEventListener("wheel",stopScroll,{passive: false});
+                html.removeEventListener("touchmove",stopScroll,{passive: false});
+                html.removeEventListener("mousewheel",stopScroll,{passive: false});
             }, 3400);
         }, 100);
     });
-
-    /* sticky 
-    let fixed_text = document.querySelector(".sticky-wrap .text-box"),
-        wrap = document.querySelector(".sticky-wrap"),
-        full = document.querySelector(".full");
-    let text_left = 0;
-    let text_bottom = 0;
-    window.addEventListener("scroll", () => {
-        if(window.innerWidth <= 1024){
-            if(wrap.classList.contains("on")) wrap.classList.remove("on");
-            return false;
-        }
-        text_left = fixed_text.getBoundingClientRect().x + "px";
-        text_bottom = full.offsetTop - parseFloat(window.getComputedStyle(document.querySelector(".detail")).getPropertyValue("padding-bottom")) - fixed_text.offsetHeight - document.querySelector("header").offsetHeight;
-        if (window.scrollY >= wrap.offsetTop - 130) {
-            fixed_text.style.left = text_left;
-            if (window.scrollY >= text_bottom) {
-                if (wrap.classList.contains("on")) wrap.classList.remove("on");
-                if (fixed_text.classList.contains("fixed")) fixed_text.classList.remove("fixed");
-                wrap.classList.add("und");
-            } else {
-                if (fixed_text.classList.contains("und")) fixed_text.classList.remove("und");
-                fixed_text.classList.add("fixed");
-            }
-        } else {
-            if (fixed_text.classList.contains("fixed")) fixed_text.classList.remove("fixed");
-            if (wrap.classList.contains("und")) wrap.classList.remove("und");
-            wrap.classList.add("on");
-        }
-    });*/
 </script>

@@ -178,7 +178,7 @@
                                 </div>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#none">브랜딩</a>
+                                        <a href="../portfolio/detail.html">브랜딩</a>
                                     </li>
                                     <li>
                                         <a href="#none">인쇄제작물</a>
@@ -291,6 +291,18 @@
                                 <input type="checkbox" value="인쇄물 디자인 카탈로그, 포스터 등">
                                 <p>인쇄물 디자인 카탈로그, 포스터 등</p>
                             </label>
+                            <label>
+                                <input type="checkbox" value="홈페이지 쇼핑몰">
+                                <p>홈페이지 쇼핑몰</p>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="상세페이지">
+                                <p>상세페이지</p>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="홍보영상">  
+                                <p>홍보영상</p>
+                            </label>
                         </div>
                     </div>
 
@@ -376,7 +388,7 @@
                             <li>3000 ~ 5000만원</li>
                             <li>5000만원 이상</li>
                         </ul>
-                        <input type="text" class="budget_input">
+                        <input type="text" class="budget_input">    
                     </div>
 
                     <div class="wrap schedule-info">
@@ -445,19 +457,9 @@
 <!-- <script src="../js_dev/dev_chang.js"></script> -->
 
 <script>
-    function fn_checkbox(data) {
-        let data_label = document.querySelectorAll(`.${data}-info label`),
-            data_check_wrap = document.querySelector(`.${data}-info .check-wrap`),
-            data_checkbox = document.querySelectorAll(`.${data}-info input[type=checkbox]`);
-        data_checkbox.forEach((el, index) => {
-            el.addEventListener("click", () => {
-                if (data_check_wrap.querySelector(".active")) {
-                    data_check_wrap.querySelector(".active input[type=checkbox]").checked = false;
-                    data_check_wrap.querySelector(".active").classList.remove("active");
-                }
-                data_label[index].classList.add("active");
-                el.checked = true;
-            });
+    function fn_checkbox(className) {
+        $(`.${className}-info input[type=checkbox]`).on("change",function(){
+            $(this).parent().toggleClass("active");
         });
     };
     fn_checkbox("service");
