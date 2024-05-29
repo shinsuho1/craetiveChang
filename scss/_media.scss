@@ -487,6 +487,9 @@
                                 margin-bottom: 50px;
                                 &.addFile{
                                     width: 100%;
+                                    .data_name{
+                                        width: calc(100% - 160.89px - 13px - 140.89px);
+                                    }
                                 }
                             }
                         }
@@ -2035,8 +2038,8 @@
                                         padding: 0 25px;
                                     }
                                     .data_name{
-                                        width: 100%;
-                                       margin-right: 0;
+                                        width: calc(100% - 103.53px);
+                                        margin-right: 0;
                                         padding: 0 10px;
                                     }
                                     .btn{

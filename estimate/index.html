@@ -251,7 +251,7 @@
                     </div>
                     <div class="text move03">
                         양식에 맞춰 자유롭게 작성해주시면 <br />
-                        해당 부서 담당자가 검토 후, 연락드리겠습니다.   
+                        해당 부서 담당자가 검토 후, 연락드리겠습니다.
                     </div>
                     <div class="ico_mouse">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -340,6 +340,7 @@
                             <label class="addFile">
                                 <div class="title">파일첨부</div>
                                 <div class="data_name">
+                                    <div class="data_name_text"></div>
                                 </div>
                                 <div class="btn">파일찾기</div>
                                 <input type="file" class="file_btn">
@@ -347,6 +348,7 @@
                             <label class="addFile">
                                 <div class="title">파일첨부</div>
                                 <div class="data_name">
+                                    <div class="data_name_text"></div>
                                 </div>
                                 <div class="btn">파일찾기</div>
                                 <input type="file" class="file_btn">
@@ -498,17 +500,18 @@
     });
 
     let file_btn = document.querySelectorAll("input.file_btn"),
+        data_name_text = document.querySelectorAll(".data_name_text"),
         data_name = document.querySelectorAll(".data_name"),
-        data_size = document.querySelectorAll(".data_size")
+        data_size = document.querySelectorAll(".data_size");
 
     file_btn.forEach((el, index) => {
         el.addEventListener("change", () => {
             if (el.files[0] == undefined) return false;
-            data_name[index].textContent = el.files[0].name;
+            data_name_text[index].textContent = el.files[0].name;
             if (el.files[0].size >= 1024) {
                 if (el.files[0].size >= (1024 * 1024 * 1024)) {
                     alert("1000MB를 초과하였습니다.");
-                    data_name[index].textContent = "";
+                    data_name[index].innerHTML = "";
                     el.value = "";
                 } else {
                     data_name[index].innerHTML += `<span class="data_size">${(el.files[0].size / (1024 * 1024)).toFixed(2)} MB</span>`;
@@ -529,12 +532,24 @@
     })
 
     function contactCheck(el) {
-        if (!el.value.trim().length > 0 || el.value.trim().length == 0) {
+        if (el == input_tel && !num.test(el.value)) {
+            el.focus();
+            return false;
+        } else if (el == input_email && !email.test(input_email.value)) {
+            el.focus();
+            return false;
+        } else if (el == input_privacy && !el.checked) {
+            el.focus();
+            return false;
+        } else if (!el.value.trim().length > 0 || el.value.trim().length == 0) {
             el.focus();
             return false;
         }
         return true;
     }
+
+    // afaf
+
 
 
     f_submit.addEventListener("click", () => {
@@ -551,13 +566,11 @@
             alert("담당자명/직책 입력해주세요.");
             return false;
         }
-        if (!num.test(input_tel.value)) {
-            input_tel.focus();
+        if (!contactCheck(input_tel)) {
             alert("연락처를 확인해주세요.");
             return false;
         }
-        if (!email.test(input_email.value)) {
-            input_email.focus();
+        if (!contactCheck(input_email)) {
             alert("이메일을 확인해주세요.");
             return false;
         }
@@ -583,7 +596,7 @@
             return false;
         }
 
-        if (!input_privacy.checked) {
+        if (!contactCheck(input_privacy)) {
             alert("개인정보취급방침에 동의해주세요.");
             return false;
         }
@@ -591,6 +604,5 @@
         form.submit();
     });
 </script>
-
 
 </html>
