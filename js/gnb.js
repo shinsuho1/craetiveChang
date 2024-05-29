@@ -82,7 +82,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     side_gnb.forEach((el, index) => {
         if (!el.querySelector(".sub-menu")) return false;
-        el.querySelector(".a-box").innerHTML += `<img src="../images/common/header_arrow.svg" alt="" class="arrow">`
+        el.querySelector(".a-box").innerHTML += `<img src="../images/common/header_arrow.svg" alt="arrow" class="arrow">`
     });
 
     window.addEventListener("scroll", () => {
