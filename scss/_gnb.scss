@@ -1,6 +1,37 @@
 $innerWidth: 90%;
 $headerHeight: 130px;
 
+#jjcanvas_bg{
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    canvas{
+       @include fullsize;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
+
+.circle{
+    width: 100%;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    .hellojj_bg{
+        @include fullsize;
+        img{
+            @include fullsize;
+            object-fit: cover
+        }
+    }
+}
+
 .hello_jj_wrap_bg {
     @include position-absolute-center;
     @include fixed-wh(100px);
@@ -228,12 +259,12 @@ $headerHeight: 130px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        >*{
+        >*:not(.circle,#jjcanvas_bg){
             width: $innerWidth;
         }
         .gnb {
             position: relative;
-            z-index: 20;
+            z-index: 5;
             margin: 0 auto;
             margin-top: 200px;
             >li {
@@ -608,7 +639,7 @@ $headerHeight: 130px;
         }
 
         .side {
-            >*{
+            >*:not(.circle,#jjcanvas_bg){
                 width: 100%;
                 padding: 0 4%;
             }
