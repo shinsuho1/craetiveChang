@@ -1,27 +1,18 @@
 let menuicon = document.querySelector(".menuicon-box"),
     side_gnb = document.querySelectorAll("header .side .gnb>li"),
     side = document.querySelector(".side"),
-    icon = document.querySelector(".menuicon .top"),
+    icon = document.querySelector(".menuicon span.pos"),
     gnb = document.querySelectorAll("header .gnb>li"),
-    header_gnb = document.querySelectorAll(".header-wrap gnb>li");
+    header_gnb = document.querySelectorAll(".header-wrap gnb>li"),
+    header = document.querySelector("header"),
+    html = document.querySelector("html")
 let page_name = ["about", "client", "portfolio", "estimate", "recruitment"];
 let url = location.href.split('/')[(location.href.split('/').length - 2)];
-
-
 window.addEventListener("DOMContentLoaded", () => {
-    /*header_gnb.forEach((el,index)=>{
-        if(url == page_name[index]){
-            el.classList.add("on");
-        }
-    });*/
-
     function setPath(circle_width) {
         side.style.clipPath = `circle(${circle_width}vw at ${(icon.getBoundingClientRect().x) + 20}px ${icon.getBoundingClientRect().y}px)`;
     }
-
     setPath(0);
-    side.style.opacity = "1";
-
     if (window.innerWidth <= 1024) {
         menuicon.classList.add("active");
     }
@@ -34,25 +25,28 @@ window.addEventListener("DOMContentLoaded", () => {
         $(this).toggleClass("active");
     });
 
-    document.querySelector("header .menuicon").addEventListener("click", () => {
-        side.classList.add("active");
-        if (window.innerWidth > 767) {
-            setPath(220);
+    document.querySelector(".menuicon").addEventListener("click", function () {
+        if (header.classList.contains("on")) {
+            header.classList.remove("on");
+            setPath(0);
         } else {
-            setPath(400);
+            header.classList.add("on");
+            if (window.innerWidth > 767) {
+                setPath(220);
+            } else {
+                setPath(400);
+            }
         }
-    });
-
-    document.querySelector("header .close_btn").addEventListener("click", () => {
-        side.classList.remove("active");
-        setPath(0);
     });
 
     gnb.forEach((el, index) => {
         el.querySelector(".a-box").innerHTML +=
             `<a href=${el.querySelector("a").getAttribute("href")} class="motion">
-            ${el.querySelector("a.normal").textContent}
-        </a>`;
+                ${el.querySelector("a.normal").textContent}
+            </a>`;
+        el.addEventListener("mouseleave", () => {
+            if (el.classList.contains("active")) el.classList.remove("active");
+        });
     });
 
     document.querySelectorAll("header .gnb a.normal").forEach((el, index) => {
@@ -74,12 +68,6 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    gnb.forEach(el => {
-        el.addEventListener("mouseleave", () => {
-            if (el.classList.contains("active")) el.classList.remove("active");
-        });
-    });
-
     side_gnb.forEach((el, index) => {
         if (!el.querySelector(".sub-menu")) return false;
         el.querySelector(".a-box").innerHTML += `<img src="../images/common/header_arrow.svg" alt="arrow" class="arrow">`
@@ -89,14 +77,13 @@ window.addEventListener("DOMContentLoaded", () => {
         if (window.innerWidth <= 1024) {
             return false;
         }
-        if (window.scrollY >= 300) {
+        if (window.scrollY >= 150) {
             menuicon.classList.add("active");
         } else {
             menuicon.classList.remove("active");
         }
     });
     window.addEventListener("resize", () => {
-        // setPath(0);
         if (window.innerWidth <= 1024) {
             if (menuicon.classList.contains("active")) return false;
             menuicon.classList.add("active");

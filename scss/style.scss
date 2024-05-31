@@ -5,24 +5,31 @@
 
 @import "function"; 
 
-@import "keyframe";
+@import "keyframe"; /* keyframe */
 
-@import "gnb";  /* gnb css */
+@import "gnb";  /* gnb */
 
-@import "main"; /* main css */
+@import "main"; /* main */
 
-/* about */
 @import "overview"; /* overview */
 
-/* portfolio */
-@import "portfolio_youonejae"; /* portfolio youonejae css */
+@import "portfolio_youonejae"; /* portfolio youonejae */
 
 @import "estimate"; /* estimate */
 
-@import "privacy";
+@import "privacy"; /* privacy */
 
 @import "recruitment"; /* recruitment */
 
 @import "move_event"; /* event transform */ 
 
 @import "./media";
+
+
+
+body{
+    &.stop_scroll{
+        height: 100%;
+        overflow-y: hidden;
+    }
+}
