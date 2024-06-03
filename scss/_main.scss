@@ -18,10 +18,8 @@ body {
     main {
         position: relative;
         z-index: 10;
-        max-width: 2560px;
         width: 100%;
         overflow-x: hidden;    
-        margin: 0 auto;
         &#main_page {
             overflow: hidden;
             @mixin mainContentMargin_01 {
@@ -504,6 +502,8 @@ body {
                 &.ms_06 {
                     overflow: visible;
                     position: relative;
+                    max-width: 2560px;
+                    margin: 0 auto;
                     article {
                         .hello_jj_wrap{
                             $wh: 100vw;

@@ -6,7 +6,9 @@ let menuicon = document.querySelector(".menuicon-box"),
     header_gnb = document.querySelectorAll(".header-wrap gnb>li"),
     header = document.querySelector("header"),
     html = document.querySelector("html"),
-    body = document.querySelector("body");
+    body = document.querySelector("body"),
+    sub_gnb = document.querySelectorAll(".side .sub-menu li");
+    console.log(sub_gnb)
 
 let page_name = ["about", "client", "portfolio", "estimate", "recruitment"];
 let url = location.href.split('/')[(location.href.split('/').length - 2)];
@@ -20,10 +22,13 @@ window.addEventListener("DOMContentLoaded", () => {
     function setPath(circle_width) {
         side.style.clipPath = `circle(${circle_width}vw at ${(icon.getBoundingClientRect().x) + 20}px ${icon.getBoundingClientRect().y}px)`;
     }
-    // if(header.classList.contains("on")){
-    //     setPath(220);
-    // }
-    setPath(0);
+    if(header.classList.contains("on")){
+        // setPath(220);
+        // menuicon.classList.add("active");
+    }else{
+        setPath(0);
+    }
+
     if (window.innerWidth <= 1024) {
         menuicon.classList.add("active");
     }
@@ -62,6 +67,13 @@ window.addEventListener("DOMContentLoaded", () => {
         el.addEventListener("mouseleave", () => {
             if (el.classList.contains("active")) el.classList.remove("active");
         });
+    });
+
+    sub_gnb.forEach((el,index)=>{
+        el.innerHTML +=
+        `<a href=${el.querySelector("a").getAttribute("href")} class="motion">
+                ${el.querySelector("a").textContent}
+            </a>`;
     });
 
     document.querySelectorAll("header .gnb a.normal").forEach((el, index) => {

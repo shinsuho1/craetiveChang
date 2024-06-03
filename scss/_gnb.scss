@@ -80,6 +80,7 @@ $headerHeight: 130px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
+            pointer-events: none;
             a.logo {
                 display: flex;
                 max-width: 146px;
@@ -99,6 +100,7 @@ $headerHeight: 130px;
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                pointer-events: visible;
                 .menuicon {
                     width: 40px;
                     height: 24px;
@@ -144,9 +146,8 @@ $headerHeight: 130px;
             font-family: "Red Hat Display", sans-serif;
             gap: 100px;
             position: relative;
-            z-index: 11;
+            z-index: 2;
             pointer-events: none;
-            transition-delay: 1.8s;
             >li {
                 position: relative;
                 width: 120px;
@@ -176,6 +177,7 @@ $headerHeight: 130px;
                         bottom: -100%;
                         cursor: pointer;
                         left: 0;
+                        text-shadow: #860000 1px 0 3px;
                     }
                 }
                 .sub-menu {
@@ -264,7 +266,7 @@ $headerHeight: 130px;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 9;
+        z-index: 3;
         overflow: hidden auto;
         pointer-events: none;
         display: flex;
@@ -320,6 +322,7 @@ $headerHeight: 130px;
                         left: 0;
                         font-weight: bold;
                         bottom: -60px;
+                        text-shadow: #860000 1px 0 3px;
                     }
 
                     .arrow {
@@ -337,14 +340,20 @@ $headerHeight: 130px;
 
                 .sub-menu {
                     display: none;
-
+                    position: relative;
                     li {
-                        margin: 10px 0;
-
                         a {
                             font-size: 30px;
                             font-weight: 500;
                             color: #fff;
+                            position: relative;
+                            &:nth-child(1){
+                            }
+                            &.motion{
+                                position: absolute;
+                                left: 0;
+                                bottom: -30px;
+                            }
                         }
                     }
                 }
@@ -447,10 +456,6 @@ $headerHeight: 130px;
     }
     &.on{
         .header-wrap{
-            .gnb{
-                transition-delay: 0s;
-                z-index: 7;
-            }
             .menuicon-box{
                 .menuicon{
                     span{
