@@ -1483,7 +1483,8 @@
                     let e = document.createElement("div");
                     e.setAttribute("id", "curtains-canvas"), document.body.appendChild(e), this.container = e, this.production || t('Curtains: no valid container HTML element or ID provided, created a div with "curtains-canvas" ID instead')
                 }
-                this._initCurtains()
+                this._initCurtains(),
+                console.log("curtains.js - v8.1.5")
             }
             _initCurtains() {
                 this.planes = [], this.renderTargets = [], this.shaderPasses = [], this._initRenderer(), this.gl && (this._initScroll(), this._setSize(), this._addListeners(), this.container.appendChild(this.canvas), console.log("curtains.js - v8.1.5"), this._animationFrameID = null, this._autoRender && this._animate())
@@ -1571,7 +1572,7 @@
             }
             _updateScroll(e, t) {
                 for (let s = 0; s < this.planes.length; s++) this.planes[s].watchScroll && this.planes[s].updateScrollPosition(e, t);
-                this.renderer.needRender(), this._onScrollCallback && this._onScrollCallback()    
+                this.renderer.needRender(), this._onScrollCallback && this._onScrollCallback()
             }
             updateScrollValues(e, t) {
                 this._scrollManager.updateScrollValues(e, t)
@@ -8173,15 +8174,3 @@
         }))
     })()
 })();
-// document.querySelector(".menuicon").addEventListener("click",()=>{
-//     _initScroll() {
-//         this._scrollManager = new h({
-//             xOffset: window.pageXOffset,
-//             yOffset: window.pageYOffset,
-//             lastXDelta: 0,
-//             lastYDelta: 0,
-//             shouldWatch: this._watchScroll,
-//             onScroll: (e, t) => this._updateScroll(e, t)
-//         })
-//     }
-// });
