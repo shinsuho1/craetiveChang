@@ -78,7 +78,7 @@
                 .move01{transform: translate(-50px,0);}
             }
             &.section02{
-                .move01{transform: translate(50px,0);}
+                .title{transform: translate(50px,0);}
             }
             &.section03{
                 .move01 {transform: translate(-50px, 0);}
@@ -86,8 +86,33 @@
             }
         }
     }
+    &.overview{
+        .wrap{
+            &.section02{
+                .move01{transform: translate(50px,0);}
+                .move02{transform: translate(-50px,0);}
+                
+                .move03{transform: translate(50px,0);}
+                .move04{transform: translate(-50px,0);}
+                .move05{transform: translate(50px,0);}
+            }
+            &.seciton03{
+                .move01{transform: translate(0,50px);}
+                .move02{transform: translate(0,-50px);}
+        
+                .move03{transform: translate(0,-50px);}
+                .move04{transform: translate(0,50px);}
+                .move05{transform: translate(0,-50px);}
+                .move06{transform: translate(0,50px);}    
+            }
+            &.section04{
+                .move01{transform: translate(0, -150px);}
+                .move02{transform: translate(0, -100px);}
+                .move03{transform: translate(0, -50px);}
+            }
+        }
+    }
 }
-
 
 
 @media (max-width:767px){
@@ -108,31 +133,3 @@
         }
     }
 }
-
-#sub.overview{
-    .wrap.section02{
-        .move01{transform: translate(50px,0);}
-        .move02{transform: translate(-50px,0);}
-        
-        .move03{transform: translate(50px,0);}
-        .move04{transform: translate(-50px,0);}
-        .move05{transform: translate(50px,0);}
-    }
-
-    .wrap.section03{
-        .move01{transform: translate(0,50px);}
-        .move02{transform: translate(0,-50px);}
-
-        .move03{transform: translate(0,-50px);}
-        .move04{transform: translate(0,50px);}
-        .move05{transform: translate(0,-50px);}
-        .move06{transform: translate(0,50px);}
-    }
-
-    .wrap.section04{
-        .move01{transform: translate(0, -150px);}
-        .move02{transform: translate(0, -100px);}
-        .move03{transform: translate(0, -50px);}
-    }
-}
-

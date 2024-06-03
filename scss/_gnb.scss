@@ -8,8 +8,11 @@ $headerHeight: 130px;
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
+    @include draggable_off;
     canvas{
-       @include fullsize;
+        @include draggable_off;
+        @include fullsize;
         position: fixed;
         top: 0;
         left: 0;
@@ -21,9 +24,14 @@ $headerHeight: 130px;
     width: 100%;
     aspect-ratio: 1/1;
     left: 50%;
-    transform: translateX(-50%);
-    top: 0px;
+    top: 50%;
+    transform: translate(-50%,-50%);
     position: fixed;
+    z-index: -1;
+    @include draggable_off;
+    *{
+        @include draggable_off;
+    }
     .hellojj_bg{
         @include fullsize;
         img{
@@ -32,10 +40,12 @@ $headerHeight: 130px;
         }
     }
 }
-@media (max-width:767px){
+@media (max-width:1024px){
     .circle{
         max-width: 1920px;
-        width: 120%;
+        width: 110%;
+        top: 0px;
+        transform: translateX(-50%)
     }
 }
 
@@ -51,7 +61,6 @@ $headerHeight: 130px;
     top: 0;
     left: 0;
     z-index: 100;
-
     .header-wrap {
         position: relative;
         width: $innerWidth;
@@ -137,6 +146,7 @@ $headerHeight: 130px;
             position: relative;
             z-index: 11;
             pointer-events: none;
+            transition-delay: 1.8s;
             >li {
                 position: relative;
                 width: 120px;
@@ -254,18 +264,17 @@ $headerHeight: 130px;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #000;
-        transition: .8s;
-        opacity: 1;
-        overflow-y: auto;
-        overflow-x: hidden;
-        clip-path: circle(0vw at 0px 0px);
-        pointer-events: none;
         z-index: 9;
+        overflow: hidden auto;
+        pointer-events: none;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        gap: 20px;
+        background-color: #000;
+        clip-path: circle(0vw at 0px 0px);
+        transition: .8s;
         >*:not(.circle,#jjcanvas_bg){
             width: $innerWidth;
         }
@@ -274,9 +283,13 @@ $headerHeight: 130px;
             z-index: 5;
             margin: 0 auto;
             margin-top: 200px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
             >li {
-                max-width: 500px;
-                width: 100%;
+                // max-width: 500px;
+                // width: 100%;
                 margin-bottom: 10px;
 
                 .a-box {
@@ -305,6 +318,7 @@ $headerHeight: 130px;
                         color: #df1f26;
                         position: absolute;
                         left: 0;
+                        font-weight: bold;
                         bottom: -60px;
                     }
 
@@ -433,6 +447,10 @@ $headerHeight: 130px;
     }
     &.on{
         .header-wrap{
+            .gnb{
+                transition-delay: 0s;
+                z-index: 7;
+            }
             .menuicon-box{
                 .menuicon{
                     span{
@@ -956,11 +974,11 @@ $headerHeight: 130px;
                 >li{
                     .a-box{
                         a{
-                            font-size: 34px;
-                            height: 34px;
+                            font-size: 30px;
+                            height: 30px;
                         }
                         .motion{
-                            bottom: -34px;
+                            bottom: -30px;
                         }
                         .arrow{
                             width: 22px;
@@ -976,7 +994,7 @@ $headerHeight: 130px;
                     &:hover{
                         .a-box{
                             .normal{
-                                bottom: 34px;
+                                bottom: 30px;
                             }
                         }
                     }

@@ -11,13 +11,19 @@ let menuicon = document.querySelector(".menuicon-box"),
 let page_name = ["about", "client", "portfolio", "estimate", "recruitment"];
 let url = location.href.split('/')[(location.href.split('/').length - 2)];
 
+window.addEventListener("load",()=>{
+    setTimeout(() => {
+        window.scrollTo({top:0});
+    }, 100);
+});
 window.addEventListener("DOMContentLoaded", () => {
     function setPath(circle_width) {
         side.style.clipPath = `circle(${circle_width}vw at ${(icon.getBoundingClientRect().x) + 20}px ${icon.getBoundingClientRect().y}px)`;
     }
-    if(header.classList.contains("on")){
-        setPath(220);
-    }
+    // if(header.classList.contains("on")){
+    //     setPath(220);
+    // }
+    setPath(0);
     if (window.innerWidth <= 1024) {
         menuicon.classList.add("active");
     }
@@ -33,6 +39,9 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".menuicon").addEventListener("click", function () {
         if (header.classList.contains("on")) {
             header.classList.remove("on");
+            if(window.scrollY < 300 && window.innerWidth > 1024){
+                menuicon.classList.remove("active");
+            }
             // body.classList.remove("stop_scroll");
             setPath(0);
         } else {
@@ -80,7 +89,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("scroll", () => {
-        if (window.innerWidth <= 1024) {
+        if (window.innerWidth <= 1024 || header.classList.contains("on")) {
             return false;
         }
         if (window.scrollY >= 150) {
