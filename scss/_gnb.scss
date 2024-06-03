@@ -5,7 +5,7 @@ $headerHeight: 130px;
     position: fixed;
     pointer-events: none;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     canvas{
@@ -17,11 +17,12 @@ $headerHeight: 130px;
 }
 
 .circle{
+    max-width: 1600px;
     width: 100%;
     aspect-ratio: 1/1;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translateX(-50%);
+    top: 0px;
     position: fixed;
     .hellojj_bg{
         @include fullsize;
@@ -29,6 +30,12 @@ $headerHeight: 130px;
             @include fullsize;
             object-fit: cover
         }
+    }
+}
+@media (max-width:767px){
+    .circle{
+        max-width: 1920px;
+        width: 120%;
     }
 }
 
@@ -349,6 +356,8 @@ $headerHeight: 130px;
             align-items: center;
             flex-wrap: wrap;
             margin-bottom: 50px;
+            position: relative;
+            z-index: 5;
             .foot-wrap{
                 .sns {
                     display: none;

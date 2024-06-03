@@ -5,14 +5,19 @@ let menuicon = document.querySelector(".menuicon-box"),
     gnb = document.querySelectorAll("header .gnb>li"),
     header_gnb = document.querySelectorAll(".header-wrap gnb>li"),
     header = document.querySelector("header"),
-    html = document.querySelector("html")
+    html = document.querySelector("html"),
+    body = document.querySelector("body");
+
 let page_name = ["about", "client", "portfolio", "estimate", "recruitment"];
 let url = location.href.split('/')[(location.href.split('/').length - 2)];
+
 window.addEventListener("DOMContentLoaded", () => {
     function setPath(circle_width) {
         side.style.clipPath = `circle(${circle_width}vw at ${(icon.getBoundingClientRect().x) + 20}px ${icon.getBoundingClientRect().y}px)`;
     }
-    setPath(0);
+    if(header.classList.contains("on")){
+        setPath(220);
+    }
     if (window.innerWidth <= 1024) {
         menuicon.classList.add("active");
     }
@@ -28,9 +33,11 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".menuicon").addEventListener("click", function () {
         if (header.classList.contains("on")) {
             header.classList.remove("on");
+            // body.classList.remove("stop_scroll");
             setPath(0);
         } else {
             header.classList.add("on");
+            // body.classList.add("stop_scroll");
             if (window.innerWidth > 767) {
                 setPath(220);
             } else {
@@ -38,7 +45,6 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
-
     gnb.forEach((el, index) => {
         el.querySelector(".a-box").innerHTML +=
             `<a href=${el.querySelector("a").getAttribute("href")} class="motion">

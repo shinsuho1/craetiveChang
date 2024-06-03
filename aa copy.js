@@ -1438,7 +1438,7 @@
                 })
             }
             scroll() {
-                // this.updateScrollValues(window.pageXOffset, window.pageYOffset)
+                this.updateScrollValues(window.pageXOffset, window.pageYOffset)
             }
             updateScrollValues(e, t) {
                 const s = this.xOffset;
@@ -8048,18 +8048,76 @@
                 smoothWheel: !0,
                 smoothTouch: !1,
                 normalizeWheel: !0
+            }), requestAnimationFrame((function s(i) {
+                e.animate(), t.raf(i), requestAnimationFrame(s)
+            })), new Xe(".ms_03 .swiper_jj", {
+                speed: 1400,
+                slidesPerView: 1,
+                allowTouchMove: !1,
+                loopAdditionalSlides: 1,
+                on: {
+                    init: function (e) {
+                        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || function (e) {
+                            var t = document.querySelectorAll(".hellojj_slide");
+                            if (document.querySelector("#jjcanvas_02").style.cssText = "width:calc( 100% + ".concat(e.virtualSize, "px );height:100%;"), t.length) {
+                                var s = new c({
+                                    container: "jjcanvas_02",
+                                    premultipliedAlpha: !0
+                                }),
+                                    i = {
+                                        vertexShader: "\n  precision mediump float;\n      \n  attribute vec3 aVertexPosition;\n  attribute vec2 aTextureCoord;\n\n  uniform mat4 uMVMatrix;\n  uniform mat4 uPMatrix;\n\n  uniform mat4 planeTextureMatrix;\n\n  varying vec3 vVertexPosition;\n  varying vec2 vTextureCoord;\n\n  void main() {\n      gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);\n\n      // varyings\n      vVertexPosition = aVertexPosition;\n      vTextureCoord = (planeTextureMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;\n  }\n  ",
+                                        fragmentShader: "\nprecision mediump float;\nvarying vec3 vVertexPosition;\nvarying vec2 vTextureCoord;\n\nuniform sampler2D planeTexture;\nuniform float uTime;\n\nvoid main() {\n  float angle = mod(uTime * 0.05, 360.0); \n  float radians = radians(angle);\n  float cosTheta = cos(radians);\n  float sinTheta = sin(radians);\n  mat2 rotationMatrix = mat2(cosTheta, -sinTheta, sinTheta, cosTheta);\n\n  vec2 textureCoord = vTextureCoord;\n  vec2 dir = textureCoord - vec2(0.5);\n  float dist = distance(textureCoord, vec2(0.5));\n\n  vec2 rotatedCoord = textureCoord - 0.5;\n  rotatedCoord = rotationMatrix * rotatedCoord;\n  rotatedCoord += 0.5;\n\n  // Precompute sin term to avoid redundant computation\n  float sinTerm = sin(dist * 40.0 - uTime * 0.1) + 0.5;\n  vec2 offset = dir * sinTerm * 0.005;\n  rotatedCoord += offset;\n\n  gl_FragColor = texture2D(planeTexture, rotatedCoord);\n}\n\n  ",
+                                        uniforms: {
+                                            time: {
+                                                name: "uTime",
+                                                type: "1f",
+                                                value: 0
+                                            }
+                                        }
+                                    };
+                                t.forEach((function (e, r) {
+                                    e.querySelector("img") && e.querySelector("img").setAttribute("data-sampler", "planeTexture");
+                                    var a = new ee(s, t[r], i);
+                                    a.onRender((function (e) {
+                                        a.uniforms.time.value++
+                                    })), e.querySelector("img") && e.querySelector("img").remove()
+                                }))
+                            }
+                        }(e)
+                    },
+                    slideChangeTransitionStart: function (e) {
+                        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (document.querySelector("#jjcanvas_02").classList.add("event_show"), document.querySelector("#jjcanvas_02").style.transform = "translate3d(".concat(e.translate, "px, 0px, 0px)"))
+                    },
+                    slideChangeTransitionEnd: function (e) {
+                        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || document.querySelector("#jjcanvas_02").classList.remove("event_show")
+                    }
+                },
+                navigation: {
+                    nextEl: ".ms_03 .swiper-btn-r",
+                    prevEl: ".ms_03 .swiper-btn-l"
+                }
+            }), new Xe(".ms_03 .swiper_text", {
+                speed: 800,
+                slidesPerView: 1,
+                allowTouchMove: !1,
+                loopAdditionalSlides: 1,
+                on: {},
+                navigation: {
+                    nextEl: ".ms_03 .swiper-btn-r",
+                    prevEl: ".ms_03 .swiper-btn-l"
+                }
             }), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? this.documentElement.querySelectorAll("body .hello_jj_wrap .hellojj img", "body .hellojj_bg").forEach((function (e, t) {
                 e.style.opacity = 1, e.style.display = "block"
-            })) :(function () {
-                if (!document.querySelector("#jjcanvas_bg")) {
+            })) : (function () {
+                if (!document.querySelector("#jjcanvas")) {
                     var e = document.createElement("div");
-                    e.setAttribute("id", "jjcanvas_bg"), document.querySelector(".side").appendChild(e)
+                    e.setAttribute("id", "jjcanvas"), e.style.cssText = "position: fixed;inset:0; z-index: 1; pointer-events:none;", document.querySelector("body").appendChild(e)
                 }
-                var t = document.querySelectorAll(".hellojj_bg");
+                var t = document.querySelectorAll(".hellojj");
                 if (t.length > 0) {
                     var s = new c({
-                        container: "jjcanvas_bg",
-                        premultipliedAlpha: 0
+                        container: "jjcanvas",
+                        premultipliedAlpha: !0
                     }),
                         i = {
                             vertexShader: "\n  precision mediump float;\n      \n  attribute vec3 aVertexPosition;\n  attribute vec2 aTextureCoord;\n\n  uniform mat4 uMVMatrix;\n  uniform mat4 uPMatrix;\n\n  uniform mat4 planeTextureMatrix;\n\n  varying vec3 vVertexPosition;\n  varying vec2 vTextureCoord;\n\n  void main() {\n      gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);\n\n      // varyings\n      vVertexPosition = aVertexPosition;\n      vTextureCoord = (planeTextureMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;\n  }\n  ",
@@ -8068,7 +8126,7 @@
                                 time: {
                                     name: "uTime",
                                     type: "1f",
-                                    value: 1
+                                    value: 0
                                 }
                             }
                         };
@@ -8080,6 +8138,36 @@
                         })), e.querySelector("img") && e.querySelector("img").remove()
                     }))
                 }
+            }(), function () {
+                // if (!document.querySelector("#jjcanvas_bg")) {
+                //     var e = document.createElement("div");
+                //     e.setAttribute("id", "jjcanvas_bg"), document.querySelector(".side").appendChild(e)
+                // }
+                // var t = document.querySelectorAll(".hellojj_bg");
+                // if (t.length > 0) {
+                //     var s = new c({
+                //         container: "jjcanvas_bg",
+                //         premultipliedAlpha: 0
+                //     }),
+                //         i = {
+                //             vertexShader: "\n  precision mediump float;\n      \n  attribute vec3 aVertexPosition;\n  attribute vec2 aTextureCoord;\n\n  uniform mat4 uMVMatrix;\n  uniform mat4 uPMatrix;\n\n  uniform mat4 planeTextureMatrix;\n\n  varying vec3 vVertexPosition;\n  varying vec2 vTextureCoord;\n\n  void main() {\n      gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);\n\n      // varyings\n      vVertexPosition = aVertexPosition;\n      vTextureCoord = (planeTextureMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;\n  }\n  ",
+                //             fragmentShader: "\nprecision mediump float;\nvarying vec3 vVertexPosition;\nvarying vec2 vTextureCoord;\n\nuniform sampler2D planeTexture;\nuniform float uTime;\n\nvoid main() {\n  float angle = mod(uTime * 0.05, 360.0); \n  float radians = radians(angle);\n  float cosTheta = cos(radians);\n  float sinTheta = sin(radians);\n  mat2 rotationMatrix = mat2(cosTheta, -sinTheta, sinTheta, cosTheta);\n\n  vec2 textureCoord = vTextureCoord;\n  vec2 dir = textureCoord - vec2(0.5);\n  float dist = distance(textureCoord, vec2(0.5));\n\n  vec2 rotatedCoord = textureCoord - 0.5;\n  rotatedCoord = rotationMatrix * rotatedCoord;\n  rotatedCoord += 0.5;\n\n  // Precompute sin term to avoid redundant computation\n  float sinTerm = sin(dist * 40.0 - uTime * 0.1) + 0.5;\n  vec2 offset = dir * sinTerm * 0.005;\n  rotatedCoord += offset;\n\n  gl_FragColor = texture2D(planeTexture, rotatedCoord);\n}\n\n  ",
+                //             uniforms: {
+                //                 time: {
+                //                     name: "uTime",
+                //                     type: "1f",
+                //                     value: 1
+                //                 }
+                //             }
+                //         };
+                //     t.forEach((function (e, r) {
+                //         e.querySelector("img") && e.querySelector("img").setAttribute("data-sampler", "planeTexture");
+                //         var a = new ee(s, t[r], i);
+                //         a.onRender((function (e) {
+                //             a.uniforms.time.value++
+                //         })), e.querySelector("img") && e.querySelector("img").remove()
+                //     }))
+                // }
             }())
         }))
     })()

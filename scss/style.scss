@@ -26,7 +26,12 @@
 @import "./media";
 
 
-
+// html{
+//     &.stop_scroll{
+//         height: 100%;
+//         overflow-y: hidden;
+//     }
+// }
 body{
     &.stop_scroll{
         height: 100%;
