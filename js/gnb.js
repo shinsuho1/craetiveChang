@@ -8,7 +8,6 @@ let menuicon = document.querySelector(".menuicon-box"),
     html = document.querySelector("html"),
     body = document.querySelector("body"),
     sub_gnb = document.querySelectorAll(".side .sub-menu li");
-    console.log(sub_gnb)
 
 let page_name = ["about", "client", "portfolio", "estimate", "recruitment"];
 let url = location.href.split('/')[(location.href.split('/').length - 2)];
@@ -22,12 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     function setPath(circle_width) {
         side.style.clipPath = `circle(${circle_width}vw at ${(icon.getBoundingClientRect().x) + 20}px ${icon.getBoundingClientRect().y}px)`;
     }
-    if(header.classList.contains("on")){
-        setPath(220);
-        menuicon.classList.add("active");
-    }else{
-        setPath(0);
-    }
+    setPath(0);
 
     if (window.innerWidth <= 1024) {
         menuicon.classList.add("active");
@@ -69,12 +63,12 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    sub_gnb.forEach((el,index)=>{
-        el.innerHTML +=
-        `<a href=${el.querySelector("a").getAttribute("href")} class="motion">
-                ${el.querySelector("a").textContent}
-            </a>`;
-    });
+    // sub_gnb.forEach((el,index)=>{
+    //     el.innerHTML +=
+    //     `<a href=${el.querySelector("a").getAttribute("href")} class="motion">
+    //             ${el.querySelector("a").textContent}
+    //         </a>`;
+    // });
 
     document.querySelectorAll("header .gnb a.normal").forEach((el, index) => {
         el.addEventListener("click", (e) => {
@@ -95,13 +89,13 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    side_gnb.forEach((el, index) => {
-        if (!el.querySelector(".sub-menu")) return false;
-        el.querySelector(".a-box").innerHTML += `<img src="../images/common/header_arrow.svg" alt="arrow" class="arrow">`
-    });
+    // side_gnb.forEach((el, index) => {
+    //     if (!el.querySelector(".sub-menu")) return false;
+    //     el.querySelector(".a-box").innerHTML += `<img src="../images/common/header_arrow.svg" alt="arrow" class="arrow">`
+    // });
 
     window.addEventListener("scroll", () => {
-        if (window.innerWidth <= 1024 || header.classList.contains("on")) {
+        if (window.innerWidth <= 1024) {
             return false;
         }
         if (window.scrollY >= 150) {
@@ -110,17 +104,17 @@ window.addEventListener("DOMContentLoaded", () => {
             menuicon.classList.remove("active");
         }
     });
-    window.addEventListener("resize", () => {
-        if (window.innerWidth <= 1024) {
-            if (menuicon.classList.contains("active")) return false;
-            menuicon.classList.add("active");
-        } else {
-            if (window.scrollY <= 300) {
-                if (!menuicon.classList.contains("active")) { return false; }
-                menuicon.classList.remove("active");
-            }
-        }
-    });
+    // window.addEventListener("resize", () => {
+    //     if (window.innerWidth <= 1024) {
+    //         if (menuicon.classList.contains("active")) return false;
+    //         menuicon.classList.add("active");
+    //     } else {
+    //         if (window.scrollY <= 300) {
+    //             if (!menuicon.classList.contains("active")) { return false; }
+    //             menuicon.classList.remove("active");
+    //         }
+    //     }
+    // });
 });
 
 

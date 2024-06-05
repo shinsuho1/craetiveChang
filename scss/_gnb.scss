@@ -54,6 +54,7 @@ $headerHeight: 130px;
     @include fixed-wh(100px);
 }
 
+// gnb
 .gnb_header {
     width: 100%;
     height: $headerHeight;
@@ -62,24 +63,22 @@ $headerHeight: 130px;
     left: 0;
     z-index: 100;
     .header-wrap {
-        position: relative;
         width: $innerWidth;
         height: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        .h_fixed{
+        .logo-box{
+            position: fixed;
             width: $innerWidth;
             height: $headerHeight;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 10;
+            right: 0;
+            display: flex;
+            align-items: center;
+            z-index: 100;
             pointer-events: none;
             a.logo {
                 display: flex;
@@ -90,54 +89,60 @@ $headerHeight: 130px;
                     object-fit: contain;
                 }
             }
-    
-            .menuicon-box {
-                top: -30px;
-                opacity: 0;
-                pointer-events: none;
-                transition: .7s;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        }
+        .menuicon-box {
+            width: $innerWidth;
+            height: $headerHeight;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            left: 50%;
+            top: 0;
+            position: fixed;
+            z-index: 100;
+            pointer-events: none;
+            transform: translateX(-50%);
+            .menuicon {
+                width: 40px;
+                height: 24px;
                 position: relative;
+                cursor: pointer;
                 pointer-events: visible;
-                .menuicon {
-                    width: 40px;
-                    height: 24px;
-                    position: relative;
-                    cursor: pointer;
-    
-                    span {
-                        width: 100%;
-                        height: 2px;
-                        background-color: #fff;
-                        opacity: .8;
-                        position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        transition: .3s;
-                        &:nth-child(1){
-                            top: 0;
-                        }
-                        &:nth-child(2){
-                            top: 50%;
-                            transform: translate(-50%,-50%);
-                        }
-                        &:nth-child(3){
-                            top: 100%;
-                            transform: translate(-50%,-50%);
-                        }
+                transform: translateY(-30px);
+                opacity: 0; pointer-events: none; visibility: hidden;
+                transition: .7s;
+                span {
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                    opacity: .8;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: .3s;
+                    &:nth-child(1){
+                        top: 0;
+                    }
+                    &:nth-child(2){
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    &:nth-child(3){
+                        top: 100%;
+                        transform: translate(-50%,-50%);
                     }
                 }
-    
-                &.active {
-                    top: 0;
+            }
+
+            &.active {
+                .menuicon{
+                    transform: translateY(0px);
                     opacity: 1;
                     pointer-events: visible;
+                    visibility: visible;
                 }
             }
         }
-
         .gnb {
             width: 100%;
             display: flex;
@@ -145,7 +150,7 @@ $headerHeight: 130px;
             align-items: center;
             font-family: "Red Hat Display", sans-serif;
             gap: 100px;
-            position: relative;
+            position: absolute;
             z-index: 2;
             pointer-events: none;
             >li {
@@ -455,24 +460,24 @@ $headerHeight: 130px;
 
     }
     &.on{
-        .header-wrap{
-            .menuicon-box{
-                .menuicon{
-                    span{
-                        &:nth-child(1){
-                            top: 50%;
-                            transform: translate(-50%,-50%) rotate(45deg);
-                        }
-                        &:nth-child(2){
-                            opacity: 0;
-                        }
-                        &:nth-child(3){
-                            top: 50%;
-                            transform: translate(-50%,-50%) rotate(-45deg);
-                        }
+        .menuicon-box{
+            .menuicon{
+                span{
+                    &:nth-child(1){
+                        top: 50%;
+                        transform: translate(-50%,-50%) rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                    &:nth-child(3){
+                        top: 50%;
+                        transform: translate(-50%,-50%) rotate(-45deg);
                     }
                 }
             }
+        }
+        .header-wrap{
         }
         .side{
             transition: 1.8s;
@@ -624,17 +629,20 @@ $headerHeight: 130px;
     $headerHeight: 110px;
 
     .gnb_header {
-
+        height: $headerHeight;
         .header-wrap {
             width: 100%;
             margin: 0;
             padding: 0 4%;
-            .h_fixed{
+            .logo-box{
                 height: $headerHeight;
                 a.logo {
                     width: 130px;
                     font-size: 18px;
                 }
+            }
+            .menuicon-box{
+                height: $headerHeight;
             }
             .gnb{
                 gap: 50px;
@@ -737,11 +745,14 @@ $headerHeight: 130px;
         height: $headerHeight;
 
         .header-wrap {
-            .h_fixed{
+            .logo-box{
                 height: $headerHeight;
                 a.logo{
                     width: 120px;
                 }
+            }
+            .menuicon-box{
+                height: $headerHeight;
             }
             .gnb{
                 display: none;
@@ -861,16 +872,17 @@ $headerHeight: 130px;
         height: $headerHeight;
 
         .header-wrap {
-            .h_fixed{
+            .logo-box{
                 height: $headerHeight;
                 a.logo{
                     width: 110px;
                 }
-                .menuicon-box{
-                    .menuicon{
-                        width: 30px;
-                        height: 18px;
-                    }
+            }
+            .menuicon-box{
+                height: $headerHeight;
+                .menuicon{
+                    width: 30px;
+                    height: 18px;
                 }
             }
         }
@@ -953,22 +965,23 @@ $headerHeight: 130px;
 
 
 @media (max-width:450px) {
-    $headerHeight: 70px;
+    $headerHeight: 60px;
 
     .gnb_header {
         height: $headerHeight;
 
         .header-wrap {
-            .h_fixed{
+            .logo-box{
                 height: $headerHeight;
                 a.logo{
                     width: 80px;
                 }
-                .menuicon-box{
-                    .menuicon{
-                        width: 25px;
-                        height: 14px;
-                    }
+            }
+            .menuicon-box{
+                height: $headerHeight;
+                .menuicon{
+                    width: 25px;
+                    height: 14px;
                 }
             }
         }
