@@ -346,7 +346,9 @@ $headerHeight: 130px;
                 .sub-menu {
                     display: none;
                     position: relative;
+                    margin-top: 10px;
                     li {
+                        margin-bottom: 5px;
                         a {
                             font-size: 30px;
                             font-weight: 500;
@@ -359,6 +361,9 @@ $headerHeight: 130px;
                                 left: 0;
                                 bottom: -30px;
                             }
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
                         }
                     }
                 }
