@@ -23,8 +23,8 @@ window.addEventListener("DOMContentLoaded", () => {
         side.style.clipPath = `circle(${circle_width}vw at ${(icon.getBoundingClientRect().x) + 20}px ${icon.getBoundingClientRect().y}px)`;
     }
     if(header.classList.contains("on")){
-        // setPath(220);
-        // menuicon.classList.add("active");
+        setPath(220);
+        menuicon.classList.add("active");
     }else{
         setPath(0);
     }
