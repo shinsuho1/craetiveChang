@@ -89,10 +89,10 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // side_gnb.forEach((el, index) => {
-    //     if (!el.querySelector(".sub-menu")) return false;
-    //     el.querySelector(".a-box").innerHTML += `<img src="../images/common/header_arrow.svg" alt="arrow" class="arrow">`
-    // });
+    side_gnb.forEach((el, index) => {
+        if (!el.querySelector(".sub-menu")) return false;
+        el.querySelector(".a-box").innerHTML += `<img src="../images/common/header_arrow.svg" alt="arrow" class="arrow">`
+    });
 
     window.addEventListener("scroll", () => {
         if (window.innerWidth <= 1024) {
@@ -104,17 +104,17 @@ window.addEventListener("DOMContentLoaded", () => {
             menuicon.classList.remove("active");
         }
     });
-    // window.addEventListener("resize", () => {
-    //     if (window.innerWidth <= 1024) {
-    //         if (menuicon.classList.contains("active")) return false;
-    //         menuicon.classList.add("active");
-    //     } else {
-    //         if (window.scrollY <= 300) {
-    //             if (!menuicon.classList.contains("active")) { return false; }
-    //             menuicon.classList.remove("active");
-    //         }
-    //     }
-    // });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth <= 1024) {
+            if (menuicon.classList.contains("active")) return false;
+            menuicon.classList.add("active");
+        } else {
+            if (window.scrollY <= 300) {
+                if (!menuicon.classList.contains("active")) { return false; }
+                menuicon.classList.remove("active");
+            }
+        }
+    });
 });
 
 
