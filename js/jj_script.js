@@ -13,35 +13,37 @@
 document.addEventListener("DOMContentLoaded", function () {
     // gsap_main();
 
-    /* ms_01 */
-    se_master(document.querySelector('.ms_01 .creative .text_01'), "lt", '', '30', '30', '0% 10%', '-40% -40%');
-    se_master(document.querySelector('.ms_01 .ad .text_01'), "l", '', '30', '', '0% 10%', '-40% -40%');
-    se_master(document.querySelector('.ms_01 .ad .text_02 '), "rb", '', '30', '30', '0% 20%', '-40% -40%');
-    se_master(document.querySelector('.ms_01 .change .text_01'), "lb", '', '30', '30', '0% 20%', '-40% -40%');
-    se_master(document.querySelector('.ms_01 .ico_mouse'), "rt", '', '', '', '0% 40%', '-40% -40%');
-    se_master(document.querySelector('.ms_01 .info .text_03'), "rb", '', '', '', '0% 20%', '-40% -40%');
-    se_master(document.querySelector('.ms_01 .btn_01'), "l", '', '', '', '0% 40%', '-40% -40%');
+    // GSAP target null not found. https://greensock.com ← 해당 요소가 페이지 내에 없어서 뜨는 경고
+    if (document.querySelector("#main_page")) {
+        se_master(document.querySelector('.ms_01 .creative .text_01'), "lt", '', '30', '30', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('.ms_01 .ad .text_01'), "l", '', '30', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('.ms_01 .ad .text_02 '), "rb", '', '30', '30', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('.ms_01 .change .text_01'), "lb", '', '30', '30', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('.ms_01 .ico_mouse'), "rt", '', '', '', '0% 40%', '-40% -40%');
+        se_master(document.querySelector('.ms_01 .info .text_03'), "rb", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('.ms_01 .btn_01'), "l", '', '', '', '0% 40%', '-40% -40%');
+        se_master(document.querySelector('.ms_05 .content'), "t", document.querySelector('.ms_05'));
 
-    se_master(document.querySelector('.ms_05 .content'), "t", document.querySelector('.ms_05'));
+    } else if (document.querySelector("#sub.estimate")) {
+        se_master(document.querySelector('#sub.estimate .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('#sub.estimate .main01 .move02'), "l", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('#sub.estimate .main01 .move03'), "r", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('#sub.estimate .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
 
-    // se_master(document.querySelector('.portfolio .scroll-section .move04'),'lt');
+    } else if (document.querySelector("#sub.recruitment")) {
+        se_master(document.querySelector('#sub.recruitment .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('#sub.recruitment .main01 .move02'), "l", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('#sub.recruitment .main01 .ico_mouse'), "rt", '', '', '', '0% 50%', '-20% -20%');
+        
+    } else if (document.querySelector("#sub.overview")) {
+        se_master(document.querySelector('#sub.overview .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('#sub.overview .main01 .move03'), "l", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('#sub.overview .main01 .move04'), "lt", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('#sub.overview .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
+    }
 
-    /* estimate */
-    se_master(document.querySelector('#sub.estimate .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
-    se_master(document.querySelector('#sub.estimate .main01 .move02'), "l", '', '', '', '0% 20%', '-40% -40%');
-    se_master(document.querySelector('#sub.estimate .main01 .move03'), "r", '', '', '', '0% 20%', '-40% -40%');
-    se_master(document.querySelector('#sub.estimate .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
 
-    /* recruitment */
-    se_master(document.querySelector('#sub.recruitment .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
-    se_master(document.querySelector('#sub.recruitment .main01 .move02'), "l", '', '', '', '0% 10%', '-40% -40%');
-    se_master(document.querySelector('#sub.recruitment .main01 .ico_mouse'), "rt", '', '', '', '0% 50%', '-20% -20%');
 
-    /* overview */
-    se_master(document.querySelector('#sub.overview .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
-    se_master(document.querySelector('#sub.overview .main01 .move03'), "l", '', '', '', '0% 20%', '-40% -40%');
-    se_master(document.querySelector('#sub.overview .main01 .move04'), "lt", '', '', '', '0% 20%', '-40% -40%');
-    se_master(document.querySelector('#sub.overview .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
 
     document.querySelectorAll('.jj_ani_return').forEach(function (el) {
         se_master(el, "return");
