@@ -1,7 +1,9 @@
 
-let head_favicon = document.querySelector("head link[rel=icon]");
-if(head_favicon.getAttribute("href") == `<?= $siteSEO['img_favicon'] ?>`){
-    head_favicon.setAttribute("href","#");
+let head_favicon = document.querySelector("head link[rel=icon]"),
+    head_favicon_href = head_favicon.getAttribute("href");
+if(head_favicon_href == `<?= $siteSEO['img_favicon'] ?>` || head_favicon_href == undefined || head_favicon_href == null){
+    // head_favicon.setAttribute("href","#");
+    head_favicon.setAttribute("href","data:;base64,iVBORw0KGgo=");
 }
 
 let menuicon = document.querySelector(".menuicon-box"),
