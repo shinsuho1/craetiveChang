@@ -25,21 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
         se_master(document.querySelector('.ms_05 .content'), "t", document.querySelector('.ms_05'));
 
     } else if (document.querySelector("#sub.estimate")) {
-        se_master(document.querySelector('#sub.estimate .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
-        se_master(document.querySelector('#sub.estimate .main01 .move02'), "l", '', '', '', '0% 20%', '-40% -40%');
-        se_master(document.querySelector('#sub.estimate .main01 .move03'), "r", '', '', '', '0% 20%', '-40% -40%');
-        se_master(document.querySelector('#sub.estimate .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
+        se_master(document.querySelector('.main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('.main01 .move02'), "l", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('.main01 .move03'), "r", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('.main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
 
     } else if (document.querySelector("#sub.recruitment")) {
-        se_master(document.querySelector('#sub.recruitment .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
-        se_master(document.querySelector('#sub.recruitment .main01 .move02'), "l", '', '', '', '0% 10%', '-40% -40%');
-        se_master(document.querySelector('#sub.recruitment .main01 .ico_mouse'), "rt", '', '', '', '0% 50%', '-20% -20%');
+        se_master(document.querySelector('.main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('.main01 .move02'), "l", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('.main01 .ico_mouse'), "rt", '', '', '', '0% 50%', '-20% -20%');
         
     } else if (document.querySelector("#sub.overview")) {
-        se_master(document.querySelector('#sub.overview .main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
-        se_master(document.querySelector('#sub.overview .main01 .move03'), "l", '', '', '', '0% 20%', '-40% -40%');
-        se_master(document.querySelector('#sub.overview .main01 .move04'), "lt", '', '', '', '0% 20%', '-40% -40%');
-        se_master(document.querySelector('#sub.overview .main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
+        se_master(document.querySelector('.main01 .move01'), "r", '', '', '', '0% 10%', '-40% -40%');
+        se_master(document.querySelector('.main01 .move03'), "l", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('.main01 .move04'), "lt", '', '', '', '0% 20%', '-40% -40%');
+        se_master(document.querySelector('.main01 .ico_mouse'), "rt", '', '', '', '0% 80%', '-20% -20%');
     }
 
 

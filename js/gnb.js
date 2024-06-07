@@ -1,3 +1,10 @@
+
+let head_favicon = document.querySelector("head link[rel=icon]");
+if(head_favicon.getAttribute("href") == `<?= $siteSEO['img_favicon'] ?>`){
+    head_favicon.setAttribute("href","#");
+}
+
+
 let menuicon = document.querySelector(".menuicon-box"),
     side_gnb = document.querySelectorAll("header .side .gnb>li"),
     side = document.querySelector(".side"),
