@@ -63,12 +63,12 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // sub_gnb.forEach((el,index)=>{
-    //     el.innerHTML +=
-    //     `<a href=${el.querySelector("a").getAttribute("href")} class="motion">
-    //             ${el.querySelector("a").textContent}
-    //         </a>`;
-    // });
+    sub_gnb.forEach((el,index)=>{
+        el.innerHTML +=
+        `<a href=${el.querySelector("a").getAttribute("href")} class="motion">
+                ${el.querySelector("a").textContent}
+            </a>`;
+    });
 
     document.querySelectorAll("header .gnb a.normal").forEach((el, index) => {
         el.addEventListener("click", (e) => {

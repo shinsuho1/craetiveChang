@@ -159,7 +159,6 @@ body {
                 }
 
                 &.ms_02 {
-                    margin-top: 240px;
                     overflow: visible;
 
                     article {
@@ -502,8 +501,6 @@ body {
                 &.ms_06 {
                     overflow: visible;
                     position: relative;
-                    max-width: 2560px;
-                    margin: 0 auto;
                     article {
                         .hello_jj_wrap{
                             $wh: 100vw;
@@ -575,6 +572,13 @@ body {
                                     &.font-12 {
                                         @include fs-12;
                                     }
+                                    &.f_column{
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        gap: 5px;
+                                    }
 
                                     a {
                                         .ico_wrap {
@@ -582,8 +586,6 @@ body {
                                             display: flex;
                                             justify-content: flex-end;
                                             align-items: center;
-
-                                            img {}
                                         }
 
                                         display: flex;

@@ -89,26 +89,26 @@
     &.overview{
         .wrap{
             &.section02{
-                .move01{transform: translate(50px,0);}
-                .move02{transform: translate(-50px,0);}
+                .move01{transform: translate(50px,0px);}
+                .move02{transform: translate(-50px,0px);}
                 
-                .move03{transform: translate(50px,0);}
-                .move04{transform: translate(-50px,0);}
-                .move05{transform: translate(50px,0);}
+                .move03{transform: translate(50px,0px);}
+                .move04{transform: translate(-50px,0px);}
+                .move05{transform: translate(50px,0px);}
             }
-            &.seciton03{
-                .move01{transform: translate(0,50px);}
-                .move02{transform: translate(0,-50px);}
+            &.section03{
+                .move01{transform: translate(0px,50px);}
+                .move02{transform: translate(0px,-50px);}
         
-                .move03{transform: translate(0,-50px);}
-                .move04{transform: translate(0,50px);}
-                .move05{transform: translate(0,-50px);}
-                .move06{transform: translate(0,50px);}    
+                .move03{transform: translate(0px,-50px);}
+                .move04{transform: translate(0px,50px);}
+                .move05{transform: translate(0px,-50px);}
+                .move06{transform: translate(0px,50px);}    
             }
             &.section04{
-                .move01{transform: translate(0, -150px);}
-                .move02{transform: translate(0, -100px);}
-                .move03{transform: translate(0, -50px);}
+                .move01{transform: translate(0px, -150px);}
+                .move02{transform: translate(0px, -100px);}
+                .move03{transform: translate(0px, -50px);}
             }
         }
     }

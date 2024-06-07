@@ -341,35 +341,7 @@ $headerHeight: 130px;
                             transform: rotate(180deg);
                         }
                     }
-                }
-
-                .sub-menu {
-                    display: none;
-                    position: relative;
-                    margin-top: 10px;
-                    li {
-                        margin-bottom: 5px;
-                        a {
-                            font-size: 30px;
-                            font-weight: 500;
-                            color: #fff;
-                            position: relative;
-                            &:nth-child(1){
-                            }
-                            &.motion{
-                                position: absolute;
-                                left: 0;
-                                bottom: -30px;
-                            }
-                        }
-                        &:last-child{
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-
-                &:hover {
-                    .a-box {
+                    &:hover{
                         .normal {
                             bottom: 60px;
                         }
@@ -379,6 +351,47 @@ $headerHeight: 130px;
                         }
                     }
                 }
+
+                .sub-menu {
+                    display: none;
+                    position: relative;
+                    margin-top: 10px;
+                    li {
+                        margin-bottom: 10px;
+                        position: relative;
+                        overflow: hidden;
+                        a {
+                            display: block;
+                            height: 30px;
+                            font-size: 30px;
+                            font-weight: 500;
+                            color: #fff;
+                            position: relative;
+                            transition: .4s;
+                            bottom: 0;
+                            line-height: 1;
+                            &.motion{
+                                position: absolute;
+                                left: 0;
+                                bottom: -30px;
+                                color: #df1f26;
+                                text-shadow: #860000 1px 0 3px;
+                            }
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        &:hover{
+                            a{
+                                bottom: 30px;
+                                &.motion{
+                                    bottom: 0;                                    
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
         .foot{
@@ -700,18 +713,25 @@ $headerHeight: 130px;
                         .motion{
                             bottom: -50px;
                         }
+                        &:hover{
+                            .normal{
+                                bottom: 50px;
+                            }
+                        }
                     }
                     .sub-menu{
                         li{
                             a{
                                 font-size: 24px;
+                                height: 24px;
+                                &.motion{
+                                    bottom: -24px;
+                                }
                             }
-                        }
-                    }
-                    &:hover{
-                        .a-box{
-                            .normal{
-                                bottom: 50px;
+                            &:hover{
+                                a{
+                                    bottom: 24px;
+                                }
                             }
                         }
                     }
@@ -781,18 +801,25 @@ $headerHeight: 130px;
                         .arrow{
                             width: 26px;
                         }
-                        .sub-menu{
-                            li{
-                                a{
-                                    font-size: 22px;
-                                }
+                        &:hover{
+                            .normal{
+                                bottom: 42px;
                             }
                         }
                     }
-                    &:hover{
-                        .a-box{
-                            .normal{
-                                bottom: 42px;
+                    .sub-menu{
+                        li{
+                            a{
+                                font-size: 22px;
+                                height: 22px;
+                                &.motion{
+                                    bottom: -22px;
+                                }
+                            }
+                            &:hover{
+                                a{
+                                    bottom: 22px;
+                                }
                             }
                         }
                     }
@@ -906,18 +933,25 @@ $headerHeight: 130px;
                         .arrow{
                             width: 24px;
                         }
+                        &:hover{
+                            .normal{
+                                bottom: 38px;
+                            }
+                        }
                     }
                     .sub-menu {
                         li {
                             a {
                                 font-size: 20px;
+                                height: 20px;
+                                &.motion{
+                                    bottom: -20px;
+                                }
                             }
-                        }
-                    }
-                    &:hover{
-                        .a-box{
-                            .normal{
-                                bottom: 38px;
+                            &:hover{
+                                a{
+                                    bottom: 20px;
+                                }
                             }
                         }
                     }
@@ -1006,18 +1040,25 @@ $headerHeight: 130px;
                         .arrow{
                             width: 22px;
                         }
+                        &:hover{
+                            .normal{
+                                bottom: 30px;
+                            }
+                        }
                     }
                     .sub-menu{
                         li{
                             a{
                                 font-size: 18px;
+                                height: 18px;
+                                &.motion{
+                                    bottom: -18px;
+                                }
                             }
-                        }
-                    }
-                    &:hover{
-                        .a-box{
-                            .normal{
-                                bottom: 30px;
+                            &:hover{
+                                a{
+                                    bottom: 18px;
+                                }
                             }
                         }
                     }
