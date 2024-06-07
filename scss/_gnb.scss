@@ -511,7 +511,7 @@ $headerHeight: 130px;
 
     background-color: transparent;
     position: relative;
-
+    width: 100%;
     .hello_jj_wrap {
         $wh: 100vw;
         max-width: 1600px;
@@ -1149,13 +1149,13 @@ $headerHeight: 130px;
         }
 
         .overview-bg {
-            $wh: 400px;
+            $wh: 100%;
             width: $wh;
             height: $wh;
             max-height: $wh;
             max-width: $wh;
-            min-width: 400px;
-            min-height: 400px;
+            min-width: 375px;
+            min-height: 375px;
             top: calc($wh / -2);
         }
     }
